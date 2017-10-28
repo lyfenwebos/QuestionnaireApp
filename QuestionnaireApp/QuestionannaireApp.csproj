@@ -106,6 +106,7 @@
     <Content Include="Questions\questions2.txt" />
     <Content Include="Questions\questions3.txt" />
     <Content Include="Questions\questions4.txt" />
+    <Content Include="VersionInfo.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
