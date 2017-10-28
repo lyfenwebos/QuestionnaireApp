@@ -56,10 +56,10 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.1.1";
-        public int[] currentVersionArray = { 0, 1, 1 };
+        public string currentVersion = "0.1.2";
+        public int[] currentVersionArray = { 0, 1, 2 };
         public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1" };
-
+        
         public MainForm()
         {
             InitializeComponent();
@@ -713,6 +713,7 @@ namespace QuestionannaireApp
                         }
 
                     }
+                    System.Threading.Thread.Sleep(5000);
                     System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
                     Application.Exit();
                     break;
