@@ -56,9 +56,9 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.1.3";
-        public int[] currentVersionArray = { 0, 1, 3 };
-        public string[] previousVersions = { "QuestionannaireApp.exe","0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2"};
+        public string currentVersion = "0.1.6";
+        public int[] currentVersionArray = { 0, 1, 6 };
+        public string[] previousVersions = { "QuestionannaireApp.exe","0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5"};
         
         public MainForm()
         {
@@ -732,7 +732,7 @@ namespace QuestionannaireApp
                     {
                         for (int p = 0; p < files.Length; p++)
                         {
-                            if (p == 0)
+                            if (p == 0 && !File.Exists(files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck))))
                             {
                                 client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
                             }
