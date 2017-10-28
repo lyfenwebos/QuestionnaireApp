@@ -34,8 +34,8 @@ namespace QuestionannaireApp
         public int qAmount = 0;
         public int qPosition = 1;
         public int oPosition;
-        public string previousVersion = "0.0.1";
-        public string currentVersion = "0.0.2";
+        public string previousVersion = "0.0.2";
+        public string currentVersion = "0.0.3";
 
 
         public bool answerA;
@@ -53,7 +53,7 @@ namespace QuestionannaireApp
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
         public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
-        public int[] versionArray = { 0, 0, 2 };
+        public int[] versionArray = { 0, 0, 3 };
         public int[] versionCheckArray = new int[3];
 
         public MainForm()
@@ -66,7 +66,9 @@ namespace QuestionannaireApp
             if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion)))
             {
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion));
+                System.Threading.Thread.Sleep(50);
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
+
             }
             int verPos = 0;
             //for(int y = 0; y < versionArray.Length; y++)
