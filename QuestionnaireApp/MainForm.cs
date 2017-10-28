@@ -34,8 +34,7 @@ namespace QuestionannaireApp
         public int qAmount = 0;
         public int qPosition = 1;
         public int oPosition;
-        public string previousVersion = "0.0.2";
-        public string currentVersion = "0.0.3";
+
 
 
         public bool answerA;
@@ -53,8 +52,13 @@ namespace QuestionannaireApp
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
         public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
-        public int[] versionArray = { 0, 0, 3 };
+
         public int[] versionCheckArray = new int[3];
+
+
+        public string currentVersion = "0.1.0";
+        public int[] currentVersionArray = { 0, 1, 0 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3" };
 
         public MainForm()
         {
@@ -63,72 +67,17 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion)))
+            foreach(string element in previousVersions)
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element)))
             {
-                File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion));
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element));
                 System.Threading.Thread.Sleep(50);
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
 
             }
-            int verPos = 0;
-            //for(int y = 0; y < versionArray.Length; y++)
-            //{
-            //    while (Version[verPos] != '.')
-            //    {
-            //        versionArray[y].Insert(y,Convert.ToString(Version[verPos]));
-            //        verPos++;
-            //    }
-            //    if (Version[verPos] == '.')
-            //    {
-            //        verPos++;
-            //        continue;
 
-            //    }
-            //}
+            update();
 
-
-            using (var client = new System.Net.WebClient())
-            {
-                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version.txt");
-            }
-            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
-            for(int y = 0; y < verCheck.Length; y++)
-            {
-                    versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
-            }
-
-            
-            foreach(int element in versionArray)
-            {
-                if (element < versionCheckArray[verPos])
-                {
-
-                    using (var client = new System.Net.WebClient())
-                    {
-                        for (int p = 0; p < files.Length; p++)
-                        {
-                            if (p == 0) 
-                                {
-                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p]+ "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
-                            }
-                            else
-                            {
-                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p]);
-                            }
-
-                        }
-
-                    }
-                    System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
-                    Application.Exit();
-                    break;
-                }
-                else
-                {
-                    answerBoxA.Text = "Version is up to date";
-                }
-                verPos++;
-            }
 
             textBoxes[0] = answerBoxA;
             textBoxes[1] = answerBoxB;
@@ -154,31 +103,6 @@ namespace QuestionannaireApp
             questions[3] = questions4;
 
         }
-
-        public void fileLoad()
-        {
-
-            using (StreamReader sr = new StreamReader(filename))
-            {
-                logfile = File.ReadAllLines(filename);
-                for (int z = 0; z <= logfile.Length; z += 6)
-                {
-                    if (z + 6 != logfile.Length)
-                    {
-                        questionsBox.Items.Add(logfile[z]);
-                    }
-                    else if (z + 6 == logfile.Length)
-                    {
-                        questionsBox.Items.Add(logfile[z]);
-                        break;
-                    }
-
-                }
-
-            }
-        }
-
-
 
         private void questionsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -228,32 +152,32 @@ namespace QuestionannaireApp
 
                         if (position == index + 1)
                         {
-                            answerBoxB.Text = aStringBuilder.ToString();
+                            answerBoxA.Text = aStringBuilder.ToString();
 
                             answerA = true;
                             //checkBox1.Checked = true;
                         }
                         else if (position == index + 2)
                         {
-                            answerBoxC.Text = aStringBuilder.ToString();
+                            answerBoxB.Text = aStringBuilder.ToString();
                             answerB = true;
                             //checkBox2.Checked = true;
                         }
                         else if (position == index + 3)
                         {
-                            answerBoxD.Text = aStringBuilder.ToString();
+                            answerBoxC.Text = aStringBuilder.ToString();
                             answerC = true;
                             //checkBox3.Checked = true;
                         }
                         else if (position == index + 4)
                         {
-                            answerBoxE.Text = aStringBuilder.ToString();
+                            answerBoxD.Text = aStringBuilder.ToString();
                             answerD = true;
                             //checkBox4.Checked = true;
                         }
                         else if (position == index + 5)
                         {
-                            answerBoxA.Text = aStringBuilder.ToString();
+                            answerBoxE.Text = aStringBuilder.ToString();
                             answerE = true;
                             //checkBox5.Checked = true;
                         }
@@ -264,66 +188,70 @@ namespace QuestionannaireApp
             }
             else if (exam)
             {
-                string word = questionsBox.SelectedItem.ToString();
-                for (int h = 1; h <= 4; h++)
+                int switchCount = 1;
+                bool done = false;
+                string word = questionsBox.SelectedItem.ToString().Split('.').Last();
+                while (!done)
                 {
-                    switch (h)
+                    switch (switchCount)
                     {
                         case 1:
                             filename = questions1;
                             logfile = File.ReadAllLines(filename);
-                            logfile.ToArray();
-                            for(int o = 0;o< logfile.Length;o+=6) 
+                            //logfile.ToArray();
+                            for (int o = 0; o < logfile.Length; o += 6)
                             {
                                 if (logfile[o].Contains(word))
                                 {
                                     oPosition = o;
-                                    break;
+                                    done = true;
                                 }
                             }
+                            switchCount++;
                             break;
                         case 2:
                             filename = questions2;
                             logfile = File.ReadAllLines(filename);
-                            logfile.ToArray();
-                                for (int o = 0; o < logfile.Length; o += 5)
+                            //logfile.ToArray();
+                            for (int o = 0; o < logfile.Length; o += 6)
+                            {
+                                if (logfile[o].Contains(word))
                                 {
-                                    if (logfile[o].Contains(questionBox.Text))
-                                    {
-                                        oPosition = o;
-                                        break;
-                                    }
+                                    oPosition = o;
+                                    done = true;
                                 }
+                            }
+                            switchCount++;
                             break;
                         case 3:
                             filename = questions3;
                             logfile = File.ReadAllLines(filename);
-                            logfile.ToArray();
-                                for (int o = 0; o < logfile.Length; o += 5)
+                            //logfile.ToArray();
+                            for (int o = 0; o < logfile.Length; o += 6)
+                            {
+                                if (logfile[o].Contains(word))
                                 {
-                                    if (logfile[o].Contains(questionBox.Text))
-                                    {
-                                       oPosition = o;
-                                        break;
-                                    }
+                                    oPosition = o;
+                                    done = true;
                                 }
+                            }
+                            switchCount++;
                             break;
                         case 4:
                             filename = questions4;
                             logfile = File.ReadAllLines(filename);
-                            logfile.ToArray();
-                                for (int o = 0; o < logfile.Length; o += 5)
+                            //logfile.ToArray();
+                            for (int o = 0; o < logfile.Length; o += 6)
+                            {
+                                if (logfile[o].Contains(word))
                                 {
-                                    if (logfile[o].Contains(questionBox.Text))
-                                    {
-                                       oPosition = o;
-                                      break;
-                                    }
-                                
+                                    oPosition = o;
+                                    done = true;
                                 }
+
+                            }
                             break;
                     }
-
                 }
                 indexChecked = questionsBox.SelectedIndex;
                 for (int y = oPosition; y <= oPosition + 5; y++)
@@ -339,32 +267,32 @@ namespace QuestionannaireApp
 
                         if (position == oPosition + 1)
                         {
-                            answerBoxB.Text = aStringBuilder.ToString();
+                            answerBoxA.Text = aStringBuilder.ToString();
 
                             answerA = true;
                             //checkBox1.Checked = true;
                         }
                         else if (position == oPosition + 2)
                         {
-                            answerBoxC.Text = aStringBuilder.ToString();
+                            answerBoxB.Text = aStringBuilder.ToString();
                             answerB = true;
                             //checkBox2.Checked = true;
                         }
                         else if (position == oPosition + 3)
                         {
-                            answerBoxD.Text = aStringBuilder.ToString();
+                            answerBoxC.Text = aStringBuilder.ToString();
                             answerC = true;
                             //checkBox3.Checked = true;
                         }
                         else if (position == oPosition + 4)
                         {
-                            answerBoxE.Text = aStringBuilder.ToString();
+                            answerBoxD.Text = aStringBuilder.ToString();
                             answerD = true;
                             //checkBox4.Checked = true;
                         }
                         else if (position == oPosition + 5)
                         {
-                            answerBoxA.Text = aStringBuilder.ToString();
+                            answerBoxE.Text = aStringBuilder.ToString();
                             answerE = true;
                             //checkBox5.Checked = true;
                         }
@@ -373,25 +301,25 @@ namespace QuestionannaireApp
 
             }
 
+            if (answerBoxA.Text == "")
+            {
+                answerBoxA.Text = logfile[oPosition + 1];
+            }
             if (answerBoxB.Text == "")
             {
-                answerBoxB.Text = logfile[index + 1];
+                answerBoxB.Text = logfile[oPosition + 2];
             }
             if (answerBoxC.Text == "")
             {
-                answerBoxC.Text = logfile[index + 2];
+                answerBoxC.Text = logfile[oPosition + 3];
             }
             if (answerBoxD.Text == "")
             {
-                answerBoxD.Text = logfile[index + 3];
+                answerBoxD.Text = logfile[oPosition + 4];
             }
             if (answerBoxE.Text == "")
             {
-                answerBoxE.Text = logfile[index + 4];
-            }
-            if (answerBoxA.Text == "")
-            {
-                answerBoxA.Text = logfile[index + 5];
+                answerBoxE.Text = logfile[oPosition + 5];
             }
 
             //if(position1== index +1 || position1 == index + 2)
@@ -419,6 +347,29 @@ namespace QuestionannaireApp
             //    answerE = true;
             //    radioButton5.Checked = true;
             //}
+        }
+
+        public void fileLoad()
+        {
+
+            using (StreamReader sr = new StreamReader(filename))
+            {
+                logfile = File.ReadAllLines(filename);
+                for (int z = 0; z <= logfile.Length; z += 6)
+                {
+                    if (z + 6 != logfile.Length)
+                    {
+                        questionsBox.Items.Add(logfile[z]);
+                    }
+                    else if (z + 6 == logfile.Length)
+                    {
+                        questionsBox.Items.Add(logfile[z]);
+                        break;
+                    }
+
+                }
+
+            }
         }
 
         private void verifyButton_Click(object sender, EventArgs e)
@@ -634,6 +585,8 @@ namespace QuestionannaireApp
             //    questions4.ToList();
             exam = true;
 
+            questionsBox.Items.Clear();
+
             answerA = false;
             answerB = false;
             answerC = false;
@@ -662,25 +615,21 @@ namespace QuestionannaireApp
                     case 1:
                         filename = questions1;
                         logfile = File.ReadAllLines(filename);
-                        logfile.ToList();
                         qAmount = logfile.Length / 6;
                         break;
                     case 2:
                         filename = questions2;
                         logfile = File.ReadAllLines(filename);
-                        logfile.ToList();
                         qAmount = logfile.Length / 6;
                         break;
                     case 3:
                         filename = questions3;
                         logfile = File.ReadAllLines(filename);
-                        logfile.ToList();
                         qAmount = logfile.Length / 6;
                         break;
                     case 4:
                         filename = questions4;
                         logfile = File.ReadAllLines(filename);
-                        logfile.ToList();
                         qAmount = logfile.Length / 6;
                         break;
                 }
@@ -731,6 +680,53 @@ namespace QuestionannaireApp
                 }
             }
             return builder.ToString();
+        }
+        public void update()
+        {
+            int verPos = 0;
+            using (var client = new System.Net.WebClient())
+            {
+                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version.txt");
+            }
+            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
+            for (int y = 0; y < verCheck.Length; y++)
+            {
+                versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
+            }
+
+
+            foreach (int element in currentVersionArray)
+            {
+                if (element < versionCheckArray[verPos])
+                {
+
+                    using (var client = new System.Net.WebClient())
+                    {
+                        for (int p = 0; p < files.Length; p++)
+                        {
+                            if (p == 0)
+                            {
+                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+                            }
+                            else
+                            {
+                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p]);
+                            }
+
+                        }
+
+                    }
+                    System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+                    Application.Exit();
+                    break;
+                }
+                else
+                {
+                    answerBoxA.Text = "Version is up to date";
+                }
+                verPos++;
+            }
+
         }
     }
 
