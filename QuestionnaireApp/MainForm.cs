@@ -63,10 +63,10 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + previousVersion))
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion)))
             {
-                File.Delete(AppDomain.CurrentDomain.BaseDirectory + previousVersion);
-                File.Delete("Version.txt");
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + previousVersion));
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
             }
             int verPos = 0;
             //for(int y = 0; y < versionArray.Length; y++)
