@@ -15,7 +15,7 @@ namespace QuestionannaireApp
     public partial class MainForm : Form
     {
 
-        public static string[] logfile;
+
         public static string filename = "";
         public string correctAnswer = "";
         //public string locationEXE = AppDomain.CurrentDomain.BaseDirectory;
@@ -34,7 +34,8 @@ namespace QuestionannaireApp
         public int qAmount = 0;
         public int qPosition = 1;
         public int oPosition;
-
+        public int corrAnsIndex;
+        public int wrongAnsIndex;
 
 
         public bool answerA;
@@ -46,19 +47,23 @@ namespace QuestionannaireApp
         public bool exam;
         public bool verified;
 
+        public static string[] logfile;
         public TextBox[] textBoxes = new TextBox[5];
         public CheckBox[] checkBoxes = new CheckBox[5];
         public bool[] answerArray = new bool[5];
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
         public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
+        public string[] examCorrectQuestions = new string[20];
+        public string[] examWrongQuestions = new string[20];
+        public int[] corrIndexes = new int[20];
 
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.1.6";
-        public int[] currentVersionArray = { 0, 1, 6 };
-        public string[] previousVersions = { "QuestionannaireApp.exe","0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5"};
+        public string currentVersion = "0.2.2";
+        public int[] currentVersionArray = { 0, 2, 0 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6"};
         
         public MainForm()
         {
@@ -73,6 +78,13 @@ namespace QuestionannaireApp
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element));
                 System.Threading.Thread.Sleep(50);
             }
+            //if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0]))
+            //{
+            //    File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0]);
+            //}
+            
+
+
             System.Threading.Thread.Sleep(1000);
             update();
             File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
@@ -402,6 +414,7 @@ namespace QuestionannaireApp
 
         private void verifyButton_Click(object sender, EventArgs e)
         {
+
             verify();
 
         }
@@ -409,150 +422,257 @@ namespace QuestionannaireApp
         {
             count = 0;
             //Answer A && checkBox1
-            if (answerA == true && checkBox1.Checked == true)
+            if (exam == false)
             {
-                answerBoxA.BackColor = Color.Green;
-                count++;
+                if (answerA == true && checkBox1.Checked == true)
+                {
+                    answerBoxA.BackColor = Color.Green;
+                    count++;
+                }
+                else if (answerA == false && checkBox1.Checked == true)
+                {
+                    answerBoxA.BackColor = Color.Red;
+                }
+                else if (answerA == false && checkBox1.Checked == false)
+                {
+                    answerBoxA.BackColor = Color.WhiteSmoke;
+                }
+
+                //Asnwer B && checkBox2
+                if (answerB == true && checkBox2.Checked == true)
+                {
+                    answerBoxB.BackColor = Color.Green;
+                    count++;
+                }
+                else if (answerB == false && checkBox2.Checked == true)
+                {
+                    answerBoxB.BackColor = Color.Red;
+                }
+                else if (answerB == false && checkBox2.Checked == false)
+                {
+                    answerBoxB.BackColor = Color.WhiteSmoke;
+                }
+
+                //Answer C && checkBox3
+                if (answerC == true && checkBox3.Checked == true)
+                {
+                    answerBoxC.BackColor = Color.Green;
+                    count++;
+                }
+                else if (answerC == false && checkBox3.Checked == true)
+                {
+                    answerBoxC.BackColor = Color.Red;
+                }
+                else if (answerC == false && checkBox3.Checked == false)
+                {
+                    answerBoxC.BackColor = Color.WhiteSmoke;
+                }
+
+                //Answer D && checkBox4
+                if (answerD == true && checkBox4.Checked == true)
+                {
+                    answerBoxD.BackColor = Color.Green;
+                    count++;
+                }
+                else if (answerD == false && checkBox4.Checked == true)
+                {
+                    answerBoxD.BackColor = Color.Red;
+                }
+                else if (answerD == false && checkBox4.Checked == false)
+                {
+                    answerBoxD.BackColor = Color.WhiteSmoke;
+                }
+
+                //Answer E && checkBox5
+                if (answerE == true && checkBox5.Checked == true)
+                {
+                    answerBoxE.BackColor = Color.Green;
+
+                    count++;
+                }
+                else if (answerE == false && checkBox5.Checked == true)
+                {
+                    answerBoxE.BackColor = Color.Red;
+                }
+                else if (answerE == false && checkBox5.Checked == false)
+                {
+                    answerBoxE.BackColor = Color.WhiteSmoke;
+                }
+
+                if (count == correctAnswers)
+                {
+                    questionsBox.SetItemChecked(indexChecked, true);
+                    //answeredQuestuins[indexChecked-1]=
+                }
+
+                foreach (CheckBox element in checkBoxes)
+                {
+                    element.Checked = false;
+                }
+
+                verified = true;
             }
-            else if (answerA == false && checkBox1.Checked == true)
+            else if (exam == true)
             {
-                answerBoxA.BackColor = Color.Red;
-            }
-            else if (answerA == false && checkBox1.Checked == false)
-            {
-                answerBoxA.BackColor = Color.WhiteSmoke;
+                if (answerA == true && checkBox1.Checked == true)
+                {
+                    count++;
+                }
+
+                if (answerB == true && checkBox2.Checked == true)
+                {
+                    count++;
+                }
+
+                if (answerC == true && checkBox3.Checked == true)
+                {
+                    count++;
+                }
+
+                if (answerD == true && checkBox4.Checked == true)
+                {
+                    count++;
+                }
+
+                if (answerE == true && checkBox5.Checked == true)
+                {
+                    count++;
+                }
+
+                if(count == correctAnswers)
+                {
+                    examCorrectQuestions[corrAnsIndex] = questionBox.Text;
+                    corrIndexes[corrAnsIndex] = indexChecked;
+                    corrAnsIndex++;
+                    
+                }
+                else
+                {
+                    examWrongQuestions[wrongAnsIndex]= questionBox.Text;
+                    wrongAnsIndex++;
+                }
             }
 
-            //Asnwer B && checkBox2
-            if (answerB == true && checkBox2.Checked == true)
-            {
-                answerBoxB.BackColor = Color.Green;
-                count++;
-            }
-            else if (answerB == false && checkBox2.Checked == true)
-            {
-                answerBoxB.BackColor = Color.Red;
-            }
-            else if (answerB == false && checkBox2.Checked == false)
-            {
-                answerBoxB.BackColor = Color.WhiteSmoke;
-            }
-
-            //Answer C && checkBox3
-            if (answerC == true && checkBox3.Checked == true)
-            {
-                answerBoxC.BackColor = Color.Green;
-                count++;
-            }
-            else if (answerC == false && checkBox3.Checked == true)
-            {
-                answerBoxC.BackColor = Color.Red;
-            }
-            else if (answerC == false && checkBox3.Checked == false)
-            {
-                answerBoxC.BackColor = Color.WhiteSmoke;
-            }
-
-            //Answer D && checkBox4
-            if (answerD == true && checkBox4.Checked == true)
-            {
-                answerBoxD.BackColor = Color.Green;
-                count++;
-            }
-            else if (answerD == false && checkBox4.Checked == true)
-            {
-                answerBoxD.BackColor = Color.Red;
-            }
-            else if (answerD == false && checkBox4.Checked == false)
-            {
-                answerBoxD.BackColor = Color.WhiteSmoke;
-            }
-
-            //Answer E && checkBox5
-            if (answerE == true && checkBox5.Checked == true)
-            {
-                answerBoxE.BackColor = Color.Green;
-
-                count++;
-            }
-            else if (answerE == false && checkBox5.Checked == true)
-            {
-                answerBoxE.BackColor = Color.Red;
-            }
-            else if (answerE == false && checkBox5.Checked == false)
-            {
-                answerBoxE.BackColor = Color.WhiteSmoke;
-            }
 
 
-            if (count == correctAnswers)
-            {
-                questionsBox.SetItemChecked(indexChecked, true);
-                //answeredQuestuins[indexChecked-1]=
-            }
 
-            foreach (CheckBox element in checkBoxes)
-            {
-                element.Checked = false;
-            }
-
-            verified = true;
         }
         private void nextButton_Click(object sender, EventArgs e)
         {
             if (verified == false && (checkBox1.Checked == true || checkBox2.Checked == true || checkBox3.Checked == true || checkBox4.Checked == true || checkBox5.Checked == true))
             {
                 verify();
-                foreach(TextBox elements in textBoxes)
+                if (exam == false)
                 {
-                    elements.Invalidate();
-                    elements.Update();
-                    elements.Refresh();
-                }
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(2000);
-            }
-
-
-            try
-            {
-                if (randomCheckBox.Checked == true)
-                {
-                    Random rnd = new Random();
-                    int randomIndex = rnd.Next(0, questionsBox.Items.Count);
-                    //while (randomIndex == indexChecked && questionsBox.GetSelected(randomIndex) == true)
-                    //{
-                    //    randomIndex = rnd.Next(0, questionsBox.Items.Count);
-                    //}
-
-                    //if (questionsBox.GetItemChecked(randomIndex)==true)
-                    //{
-                    //    randomIndex = rnd.Next(0, questionsBox.Items.Count);
-                    //}
-
-                    check:
-
-                    if (!questionsBox.GetItemChecked(randomIndex))
+                    foreach (TextBox elements in textBoxes)
                     {
-                        questionsBox.SetSelected(randomIndex, true);
+                        elements.Invalidate();
+                        elements.Update();
+                        elements.Refresh();
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(2000);
                     }
-                    else if (questionsBox.GetItemChecked(randomIndex))
-                    {
-                        randomIndex = rnd.Next(0, questionsBox.Items.Count);
-                        goto check;
-                    }
+
+
                 }
-                else
+
+
+                try
                 {
-                    questionsBox.SetSelected(indexChecked + 1, true);
+                    if (randomCheckBox.Checked == true)
+                    {
+                        Random rnd = new Random();
+                        int randomIndex = rnd.Next(0, questionsBox.Items.Count);
+                        //while (randomIndex == indexChecked && questionsBox.GetSelected(randomIndex) == true)
+                        //{
+                        //    randomIndex = rnd.Next(0, questionsBox.Items.Count);
+                        //}
+
+                        //if (questionsBox.GetItemChecked(randomIndex)==true)
+                        //{
+                        //    randomIndex = rnd.Next(0, questionsBox.Items.Count);
+                        //}
+
+                        check:
+
+                        if (!questionsBox.GetItemChecked(randomIndex))
+                        {
+                            questionsBox.SetSelected(randomIndex, true);
+                        }
+                        else if (questionsBox.GetItemChecked(randomIndex))
+                        {
+                            randomIndex = rnd.Next(0, questionsBox.Items.Count);
+                            goto check;
+                        }
+                    }
+                    else
+                    {
+                        questionsBox.SetSelected(indexChecked + 1, true);
+                    }
+
+
                 }
-            }
-            catch (ArgumentOutOfRangeException)
-            {
-                MessageBox.Show("Это последний вопрос!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                catch (ArgumentOutOfRangeException)
+                {
+                    if (exam == false)
+                    {
+                        MessageBox.Show("Это последний вопрос!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    else
+                    {
+                        int examCorrAnsCount = 0;
+                        int examWrongAnsCount = 0;
+                        foreach (string element in examCorrectQuestions)
+                        {
+                            if (element != null && element != "")
+                            {
+                                examCorrAnsCount++;
+                            }
+                        }
+                        foreach (string element in examWrongQuestions)
+                        {
+                            if (element != null && element != "")
+                            {
+                                examWrongAnsCount++;
+                            }
+                        }
+                        foreach (int element in corrIndexes)
+                        {
+                            if (element != 0)
+                            {
+                                questionsBox.SetItemChecked(element, true);
+                            }
+                        }
+                        //try
+                        //{
+                            //foreach (string element in examCorrectQuestions)
+                            //{
+                            //    foreach (Object item in questionsBox.Items)
+                            //    {
+                            //        if (element != null)
+                            //        {
+                            //            if (Convert.ToString(item) == element)
+                            //            {
+                            //                questionsBox.SetItemChecked(questionsBox.Items.IndexOf(item), true);
+                            //                //int index = questionsBox.Items.IndexOf(item);
+                            //            }
+                            //        }
+
+                            //    }
+                            //}
+
+                        //}
+                       // catch (InvalidOperationException)
+                       // {
+                         //   MessageBox.Show("Результат теста: " + "\n"+ 
+                        //        "Из "+ (Convert.ToInt32(examCorrAnsCount)+Convert.ToInt32(examWrongAnsCount)) +" ответов - "+examCorrAnsCount+" правильных и "+examWrongAnsCount+" неправильных", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                       // }
+                    //
+                    }
+                }
             }
         }
-
+        //public 
         private void backButton_Click(object sender, EventArgs e)
         {
             try
@@ -567,6 +687,7 @@ namespace QuestionannaireApp
 
         private void moodul1TS_Click(object sender, EventArgs e)
         {
+            verifyButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №1";
@@ -577,6 +698,7 @@ namespace QuestionannaireApp
 
         private void moodul2TS_Click(object sender, EventArgs e)
         {
+            verifyButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №2";
@@ -587,6 +709,7 @@ namespace QuestionannaireApp
 
         private void moodul3TS_Click(object sender, EventArgs e)
         {
+            verifyButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №3";
@@ -597,6 +720,7 @@ namespace QuestionannaireApp
 
         private void moodul4TS_Click(object sender, EventArgs e)
         {
+            verifyButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №4";
@@ -612,8 +736,11 @@ namespace QuestionannaireApp
             //    questions3.ToList();
             //    questions4.ToList();
             exam = true;
-
+            verifyButton.Enabled = false;
             questionsBox.Items.Clear();
+            randomCheckBox.Enabled = false;
+            backButton.Enabled = false;
+            //questionsBox.Enabled = false;
 
             answerA = false;
             answerB = false;
@@ -690,9 +817,11 @@ namespace QuestionannaireApp
                     aStringBuilder.Insert(0,qPosition + ".");
                     qPosition++;
                     questionsBox.Items.Add(aStringBuilder);
-                    System.Threading.Thread.Sleep(20);
+                    System.Threading.Thread.Sleep(50);
+
 
                 }
+                questionsBox.SetSelected(0, true);
             }
         }
         static string ConvertStringArrayToString(string[] array)
