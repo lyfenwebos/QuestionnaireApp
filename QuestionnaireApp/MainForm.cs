@@ -56,9 +56,9 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.1.3";
-        public int[] currentVersionArray = { 0, 1, 3 };
-        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2" };
+        public string currentVersion = "0.1.4";
+        public int[] currentVersionArray = { 0, 1, 4 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3"};
         
         public MainForm()
         {
@@ -133,10 +133,19 @@ namespace QuestionannaireApp
 
             correctAnswers = 0;
             questionBox.Text = questionsBox.SelectedItem.ToString();
+
             if (!exam)
             {
+                //string word = questionsBox.SelectedItem.ToString().Split('.').Last();
+
                 index = Array.IndexOf(logfile, questionBox.Text);
+
+
+
                 indexChecked = questionsBox.SelectedIndex;
+
+
+
                 for (int y = index; y <= index + 5; y++)
                 {
                     if (logfile[y].Contains('+'))
@@ -182,6 +191,26 @@ namespace QuestionannaireApp
 
 
                     }
+                }
+                if (answerBoxA.Text == "")
+                {
+                    answerBoxA.Text = logfile[index + 1];
+                }
+                if (answerBoxB.Text == "")
+                {
+                    answerBoxB.Text = logfile[index + 2];
+                }
+                if (answerBoxC.Text == "")
+                {
+                    answerBoxC.Text = logfile[index + 3];
+                }
+                if (answerBoxD.Text == "")
+                {
+                    answerBoxD.Text = logfile[index + 4];
+                }
+                if (answerBoxE.Text == "")
+                {
+                    answerBoxE.Text = logfile[index + 5];
                 }
             }
             else if (exam)
@@ -296,29 +325,30 @@ namespace QuestionannaireApp
                         }
                     }
                 }
+                if (answerBoxA.Text == "")
+                {
+                    answerBoxA.Text = logfile[oPosition + 1];
+                }
+                if (answerBoxB.Text == "")
+                {
+                    answerBoxB.Text = logfile[oPosition + 2];
+                }
+                if (answerBoxC.Text == "")
+                {
+                    answerBoxC.Text = logfile[oPosition + 3];
+                }
+                if (answerBoxD.Text == "")
+                {
+                    answerBoxD.Text = logfile[oPosition + 4];
+                }
+                if (answerBoxE.Text == "")
+                {
+                    answerBoxE.Text = logfile[oPosition + 5];
+                }
 
             }
 
-            if (answerBoxA.Text == "")
-            {
-                answerBoxA.Text = logfile[oPosition + 1];
-            }
-            if (answerBoxB.Text == "")
-            {
-                answerBoxB.Text = logfile[oPosition + 2];
-            }
-            if (answerBoxC.Text == "")
-            {
-                answerBoxC.Text = logfile[oPosition + 3];
-            }
-            if (answerBoxD.Text == "")
-            {
-                answerBoxD.Text = logfile[oPosition + 4];
-            }
-            if (answerBoxE.Text == "")
-            {
-                answerBoxE.Text = logfile[oPosition + 5];
-            }
+           
 
             //if(position1== index +1 || position1 == index + 2)
             //{
