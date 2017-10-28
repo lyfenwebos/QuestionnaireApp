@@ -24,6 +24,8 @@ namespace QuestionannaireApp
         public string questions3 = AppDomain.CurrentDomain.BaseDirectory + "questions3.txt";
         public string questions4 = AppDomain.CurrentDomain.BaseDirectory + "questions4.txt";
 
+
+
         public int position = 0;
         public int correctAnswers = 0;
         public int count = 0;
@@ -49,6 +51,8 @@ namespace QuestionannaireApp
         public bool[] answerArray = new bool[5];
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
+        public int[] versionArray = { 0, 0, 1 };
+        public int[] versionCheckArray = new int[3];
 
         public MainForm()
         {
@@ -57,11 +61,55 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            textBoxes[0] = answerBoxB;
-            textBoxes[1] = answerBoxC;
-            textBoxes[2] = answerBoxD;
-            textBoxes[3] = answerBoxE;
-            textBoxes[4] = answerBoxA;
+            int verPos = 0;
+            //for(int y = 0; y < versionArray.Length; y++)
+            //{
+            //    while (Version[verPos] != '.')
+            //    {
+            //        versionArray[y].Insert(y,Convert.ToString(Version[verPos]));
+            //        verPos++;
+            //    }
+            //    if (Version[verPos] == '.')
+            //    {
+            //        verPos++;
+            //        continue;
+
+            //    }
+            //}
+
+
+            using (var client = new System.Net.WebClient())
+            {
+                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version2.txt");
+            }
+            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version2.txt");
+
+            for(int y = 0; y < verCheck.Length; y++)
+            {
+                    versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
+            }
+
+            
+            foreach(int element in versionArray)
+            {
+                if (element < versionCheckArray[verPos])
+                {
+                    answerBoxA.Text = "Element #" + verPos + " is lower than should be";
+                    
+                }
+                else
+                {
+                    answerBoxA.Text = "Version is up to date";
+                }
+                verPos++;
+            }
+            File.Delete("Version.txt");
+
+            textBoxes[0] = answerBoxA;
+            textBoxes[1] = answerBoxB;
+            textBoxes[2] = answerBoxC;
+            textBoxes[3] = answerBoxD;
+            textBoxes[4] = answerBoxE;
 
             checkBoxes[0] = checkBox1;
             checkBoxes[1] = checkBox2;
@@ -88,7 +136,6 @@ namespace QuestionannaireApp
             using (StreamReader sr = new StreamReader(filename))
             {
                 logfile = File.ReadAllLines(filename);
-                logfile.ToList();
                 for (int z = 0; z <= logfile.Length; z += 6)
                 {
                     if (z + 6 != logfile.Length)
