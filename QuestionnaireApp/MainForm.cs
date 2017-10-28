@@ -56,9 +56,9 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.1.0";
-        public int[] currentVersionArray = { 0, 1, 0 };
-        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3" };
+        public string currentVersion = "0.1.1";
+        public int[] currentVersionArray = { 0, 1, 1 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1" };
 
         public MainForm()
         {
@@ -72,12 +72,9 @@ namespace QuestionannaireApp
             {
                 File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element));
                 System.Threading.Thread.Sleep(50);
-                File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
-
             }
-
             update();
-
+            File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
 
             textBoxes[0] = answerBoxA;
             textBoxes[1] = answerBoxB;
