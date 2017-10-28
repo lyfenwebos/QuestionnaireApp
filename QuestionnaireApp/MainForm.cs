@@ -61,9 +61,9 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.2.2";
-        public int[] currentVersionArray = { 0, 2, 0 };
-        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6"};
+        public string currentVersion = "0.2.1";
+        public int[] currentVersionArray = { 0, 2, 1 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6", "0.2.0"};
         
         public MainForm()
         {
@@ -688,6 +688,8 @@ namespace QuestionannaireApp
         private void moodul1TS_Click(object sender, EventArgs e)
         {
             verifyButton.Enabled = true;
+            randomCheckBox.Enabled = true;
+            backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №1";
@@ -699,6 +701,8 @@ namespace QuestionannaireApp
         private void moodul2TS_Click(object sender, EventArgs e)
         {
             verifyButton.Enabled = true;
+            randomCheckBox.Enabled = true;
+            backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №2";
@@ -710,6 +714,8 @@ namespace QuestionannaireApp
         private void moodul3TS_Click(object sender, EventArgs e)
         {
             verifyButton.Enabled = true;
+            randomCheckBox.Enabled = true;
+            backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №3";
@@ -721,6 +727,8 @@ namespace QuestionannaireApp
         private void moodul4TS_Click(object sender, EventArgs e)
         {
             verifyButton.Enabled = true;
+            randomCheckBox.Enabled = true;
+            backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
             moodulName.Text = "Модуль №4";
