@@ -34,7 +34,8 @@ namespace QuestionannaireApp
         public int qAmount = 0;
         public int qPosition = 1;
         public int oPosition;
-
+        public string previousVersion = "0.0.1";
+        public string currentVersion = "0.0.2";
 
 
         public bool answerA;
@@ -51,6 +52,7 @@ namespace QuestionannaireApp
         public bool[] answerArray = new bool[5];
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
+        public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
         public int[] versionArray = { 0, 0, 1 };
         public int[] versionCheckArray = new int[3];
 
@@ -61,6 +63,11 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + previousVersion))
+            {
+                File.Delete(AppDomain.CurrentDomain.BaseDirectory + previousVersion);
+                File.Delete("Version.txt");
+            }
             int verPos = 0;
             //for(int y = 0; y < versionArray.Length; y++)
             //{
@@ -80,10 +87,9 @@ namespace QuestionannaireApp
 
             using (var client = new System.Net.WebClient())
             {
-                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version2.txt");
+                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version.txt");
             }
-            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version2.txt");
-
+            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
             for(int y = 0; y < verCheck.Length; y++)
             {
                     versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
@@ -94,8 +100,27 @@ namespace QuestionannaireApp
             {
                 if (element < versionCheckArray[verPos])
                 {
-                    answerBoxA.Text = "Element #" + verPos + " is lower than should be";
-                    
+
+
+                    using (var client = new System.Net.WebClient())
+                    {
+                        for (int p = 0; p < files.Length; p++)
+                        {
+                            if (p == 0) 
+                                {
+                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p]+ "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+                            }
+                            else
+                            {
+                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p]);
+                            }
+
+                        }
+
+                    }
+                    System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+                    Application.Exit();
+                    break;
                 }
                 else
                 {
@@ -103,7 +128,6 @@ namespace QuestionannaireApp
                 }
                 verPos++;
             }
-            File.Delete("Version.txt");
 
             textBoxes[0] = answerBoxA;
             textBoxes[1] = answerBoxB;
@@ -692,6 +716,20 @@ namespace QuestionannaireApp
 
                 }
             }
+        }
+        static string ConvertStringArrayToString(string[] array)
+        {
+            // Concatenate all the elements into a StringBuilder.
+            StringBuilder builder = new StringBuilder();
+            for (int r = 0; r<array.Length;r++)
+            {
+                builder.Append(array[r]);
+                if (r > array.Length)
+                {
+                    builder.Append('.');
+                }
+            }
+            return builder.ToString();
         }
     }
 
