@@ -724,7 +724,7 @@ namespace QuestionannaireApp
             for (int r = 0; r<array.Length;r++)
             {
                 builder.Append(array[r]);
-                if (r > array.Length)
+                if (r != array.Length-1)
                 {
                     builder.Append('.');
                 }
