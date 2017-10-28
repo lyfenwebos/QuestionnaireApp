@@ -53,7 +53,7 @@ namespace QuestionannaireApp
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
         public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
-        public int[] versionArray = { 0, 0, 1 };
+        public int[] versionArray = { 0, 0, 2 };
         public int[] versionCheckArray = new int[3];
 
         public MainForm()
@@ -100,7 +100,6 @@ namespace QuestionannaireApp
             {
                 if (element < versionCheckArray[verPos])
                 {
-
 
                     using (var client = new System.Net.WebClient())
                     {
