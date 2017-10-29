@@ -61,9 +61,9 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.2.3";
-        public int[] currentVersionArray = { 0, 2, 3 };
-        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6", "0.2.0","0.2.1"};
+        public string currentVersion = "0.2.4";
+        public int[] currentVersionArray = { 0, 2, 4 };
+        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6", "0.2.0","0.2.1","0.2.2","0.2.3"};
         
         public MainForm()
         {
@@ -570,8 +570,9 @@ namespace QuestionannaireApp
                         elements.Update();
                         elements.Refresh();
                         Application.DoEvents();
-                        System.Threading.Thread.Sleep(2000);
+                        
                     }
+                    System.Threading.Thread.Sleep(2000);
 
 
                 }
