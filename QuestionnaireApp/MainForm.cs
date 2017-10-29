@@ -16,7 +16,7 @@ namespace QuestionannaireApp
     {
 
 
-        public static string filename = "";
+        public string filename = "";
         public string correctAnswer = "";
         //public string locationEXE = AppDomain.CurrentDomain.BaseDirectory;
         public string questions1 = AppDomain.CurrentDomain.BaseDirectory + "questions1.txt";
