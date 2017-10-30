@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace QuestionnaireDroidApp
+namespace QuestionnaireCrossApp
 {
 	public partial class App : Application
 	{

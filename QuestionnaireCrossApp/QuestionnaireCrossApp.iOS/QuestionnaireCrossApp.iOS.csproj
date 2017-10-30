@@ -6,12 +6,12 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4DF42FA5-1D32-4C4C-8882-69B555CE5A54}</ProjectGuid>
+    <ProjectGuid>{2A7CC8B3-E44D-46DA-90B7-FAAE48110524}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>QuestionnaireDroidApp.iOS</RootNamespace>
+    <RootNamespace>QuestionnaireCrossApp.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>QuestionnaireDroidApp.iOS</AssemblyName>
+    <AssemblyName>QuestionnaireCrossApp.iOS</AssemblyName>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -134,7 +134,7 @@
     </Reference>
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
-  <Import Project="..\QuestionnaireDroidApp\QuestionnaireDroidApp.projitems" Label="Shared" Condition="Exists('..\QuestionnaireDroidApp\QuestionnaireDroidApp.projitems')" />
+  <Import Project="..\QuestionnaireCrossApp\QuestionnaireCrossApp.projitems" Label="Shared" Condition="Exists('..\QuestionnaireCrossApp\QuestionnaireCrossApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

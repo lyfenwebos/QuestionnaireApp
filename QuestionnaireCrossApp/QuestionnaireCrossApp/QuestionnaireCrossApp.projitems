@@ -3,15 +3,19 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>aad13885-c60a-4c86-82ee-8ae7b2dbc3c9</SharedGUID>
+    <SharedGUID>9668900a-34e0-4e56-b826-0eaae37c3003</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>QuestionnaireDroidApp</Import_RootNamespace>
+    <Import_RootNamespace>QuestionnaireCrossApp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\GestureFrame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\GestureFrameRenderer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

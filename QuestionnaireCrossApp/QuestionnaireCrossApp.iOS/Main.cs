@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace QuestionnaireDroidApp.iOS
+namespace QuestionnaireCrossApp.iOS
 {
 	public class Application
 	{
