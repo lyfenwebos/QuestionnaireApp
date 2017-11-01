@@ -12,9 +12,7 @@ namespace QuestionnaireCrossApp
         public App ()
         { 
 			InitializeComponent();
-
-            var mainPage = new FirstPage();//this could be content page
-            var rootPage = new NavigationPage(mainPage);
+            MainPage = new FirstPage();
 
         }
 

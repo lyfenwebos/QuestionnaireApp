@@ -35,25 +35,12 @@ namespace QuestionnaireCrossApp
             //Title = "Q&A Pos Check";
 
             var layout = new AbsoluteLayout();
-            var backgroundBox = new BoxView { BackgroundColor = Color.DimGray };
-            AbsoluteLayout.SetLayoutBounds(backgroundBox, new Rectangle(0, 0, 1, 1));
-            AbsoluteLayout.SetLayoutFlags(backgroundBox, AbsoluteLayoutFlags.All);
 
 
-            var boxQ = new BoxView { BackgroundColor = Color.Gray };
-            AbsoluteLayout.SetLayoutBounds(boxQ, new Rectangle(0, .05, 2, .1));
-            AbsoluteLayout.SetLayoutFlags(boxQ, AbsoluteLayoutFlags.All);
-
-
-            var questionLabel = new Label { Text = "01.В чьей компетенции находится выдача и продление свидетельств на право управления локомотивом?", LineBreakMode = LineBreakMode.WordWrap };
+            //Labels
+            var questionLabel = new Label { Text = "01.В чьей компетенции находится выдача и продление свидетельств на право управления локомотивом?01.В чьей компетенции находится выдача и продление свидетельств на право управления локомотивом?", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(questionLabel, new Rectangle(0.1, .05, .9, .1));
             AbsoluteLayout.SetLayoutFlags(questionLabel, AbsoluteLayoutFlags.All);
-
-
-
-            var boxA = new BoxView { BackgroundColor = Color.Gray, };
-            AbsoluteLayout.SetLayoutBounds(boxA, new Rectangle(0, .25, 1, .1));
-            AbsoluteLayout.SetLayoutFlags(boxA, AbsoluteLayoutFlags.All);
 
             var answerLabelA = new Label { Text = "Предпринимателя в сфере железнодорожных перевозок", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(answerLabelA, new Rectangle(.1, .25, .9, .1));
@@ -63,43 +50,71 @@ namespace QuestionnaireCrossApp
             //AbsoluteLayout.SetLayoutBounds(boxA, new Rectangle(0, .4, .1, .1));
             //AbsoluteLayout.SetLayoutFlags(boxA, AbsoluteLayoutFlags.All);
 
-
-            var boxB = new BoxView { BackgroundColor = Color.Gray };
-            AbsoluteLayout.SetLayoutBounds(boxB, new Rectangle(0, .4, 1, .1));
-            AbsoluteLayout.SetLayoutFlags(boxB, AbsoluteLayoutFlags.All);
-
             var answerLabelB = new Label { Text = "Депо", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(answerLabelB, new Rectangle(.1, .4, .9, .1));
             AbsoluteLayout.SetLayoutFlags(answerLabelB, AbsoluteLayoutFlags.All);
 
 
-            var boxC = new BoxView { BackgroundColor = Color.Gray };
-            AbsoluteLayout.SetLayoutBounds(boxC, new Rectangle(0, .55, 1, .1));
-            AbsoluteLayout.SetLayoutFlags(boxC, AbsoluteLayoutFlags.All);
-
             var answerLabelC = new Label { Text = "Министерства экономики и коммуникаций", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(answerLabelC, new Rectangle(.1, .55, .9, .1));
             AbsoluteLayout.SetLayoutFlags(answerLabelC, AbsoluteLayoutFlags.All);
 
-            var boxD = new BoxView { BackgroundColor = Color.Gray };
-            AbsoluteLayout.SetLayoutBounds(boxD, new Rectangle(0, .7, 1, .1));
-            AbsoluteLayout.SetLayoutFlags(boxD, AbsoluteLayoutFlags.All);
 
             var answerLabelD = new Label { Text = "Департамента технического надзора ", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(answerLabelD, new Rectangle(.1, .7, .9, .1));
             AbsoluteLayout.SetLayoutFlags(answerLabelD, AbsoluteLayoutFlags.All);
 
 
-            var boxE = new BoxView { BackgroundColor = Color.Gray };
-            AbsoluteLayout.SetLayoutBounds(boxE, new Rectangle(0, .85, 1, .1));
-            AbsoluteLayout.SetLayoutFlags(boxE, AbsoluteLayoutFlags.All);
-
             var answerLabelE = new Label { Text = "Какой-либо обслуживающей фирмы", LineBreakMode = LineBreakMode.WordWrap };
             AbsoluteLayout.SetLayoutBounds(answerLabelE, new Rectangle(.1, .85, .9, .1));
             AbsoluteLayout.SetLayoutFlags(answerLabelE, AbsoluteLayoutFlags.All);
 
+
+
+
+            //Boxes
+            var backgroundBox = new BoxView { BackgroundColor = Color.DimGray };
+            AbsoluteLayout.SetLayoutBounds(backgroundBox, new Rectangle(0, 0, 1, 1));
+            AbsoluteLayout.SetLayoutFlags(backgroundBox, AbsoluteLayoutFlags.All);
+
+
+            var boxQ = new BoxView { BackgroundColor = Color.Gray};
+            AbsoluteLayout.SetLayoutBounds(boxQ, new Rectangle(0, .05, 2, .1));
+            AbsoluteLayout.SetLayoutFlags(boxQ, AbsoluteLayoutFlags.All);
+
+
+            var boxA = new BoxView { BackgroundColor = Color.Gray, HeightRequest = answerLabelA.Height};
+            AbsoluteLayout.SetLayoutBounds(boxA, new Rectangle(0, .25, 1, .1));
+            AbsoluteLayout.SetLayoutFlags(boxA, AbsoluteLayoutFlags.All);
+
+
+            var boxB = new BoxView { BackgroundColor = Color.Gray, HeightRequest = answerLabelB.Height };
+            AbsoluteLayout.SetLayoutBounds(boxB, new Rectangle(0, .4, 1, .1));
+            AbsoluteLayout.SetLayoutFlags(boxB, AbsoluteLayoutFlags.All);
+
+
+            var boxC = new BoxView { BackgroundColor = Color.Gray, HeightRequest =answerLabelC.Height };
+            AbsoluteLayout.SetLayoutBounds(boxC, new Rectangle(0, .55, 1, .1));
+            AbsoluteLayout.SetLayoutFlags(boxC, AbsoluteLayoutFlags.All);
+
+
+            var boxD = new BoxView { BackgroundColor = Color.Gray, HeightRequest = answerLabelD.Height };
+            AbsoluteLayout.SetLayoutFlags(boxD, AbsoluteLayoutFlags.All);
+
+
+            var boxE = new BoxView { BackgroundColor = Color.Gray, HeightRequest = answerLabelE.Height };
+            AbsoluteLayout.SetLayoutBounds(boxE, new Rectangle(0, .85, 1, .1));
+            AbsoluteLayout.SetLayoutFlags(boxE, AbsoluteLayoutFlags.All);
+
+
+
+           
+
+
+
+
             var nextButton = new Button { Text = "Далее" };
-            AbsoluteLayout.SetLayoutBounds(nextButton, new Rectangle(.95, .95, .3, .05));
+            AbsoluteLayout.SetLayoutBounds(nextButton, new Rectangle(.95, .95, .3, .1));
             AbsoluteLayout.SetLayoutFlags(nextButton, AbsoluteLayoutFlags.All);
 
 
