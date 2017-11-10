@@ -92,7 +92,7 @@ namespace QuestionnaireAndroidApp
                 mViewPagerPageChangeListener = value;
             }
         }
-        public ViewPager ViePager
+        public ViewPager ViewPager
         {
             set
             {
@@ -103,6 +103,7 @@ namespace QuestionnaireAndroidApp
                     value.PageSelected += value_PageSelected;
                     value.PageScrollStateChanged += value_PageScrollStateChanged;
                     value.PageScrolled += value_PageScrolled;
+                    PopulateTabStrip();
                 }
             }
         }
@@ -157,7 +158,7 @@ namespace QuestionnaireAndroidApp
             for(int i = 0; i < adapter.Count; i++)
             {
                 TextView tabView = CreateDefaultTabView(Context);
-                tabView.Text = i.ToString();
+                tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
                 tabView.SetTextColor(Android.Graphics.Color.Black);
                 tabView.Tag = i;
                 tabView.Click += tabView_Click;
