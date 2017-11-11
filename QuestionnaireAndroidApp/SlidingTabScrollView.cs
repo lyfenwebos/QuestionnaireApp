@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
-using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.View;
 using Android.Util;
+using Android.Support.V4.View;
 
 namespace QuestionnaireAndroidApp
 {
     public class SlidingTabScrollView : HorizontalScrollView
     {
+
         private const int TITLE_OFFSET_DIPS = 24;
         private const int TAB_VIEW_PADDING_DIPS = 16;
-        private const int TAB_VIEW_TEXT_SIZE_SP=12;
+        private const int TAB_VIEW_TEXT_SIZE_SP = 12;
 
         private int mTitleOffset;
 
@@ -32,7 +28,6 @@ namespace QuestionnaireAndroidApp
 
         private int mScrollState;
 
-
         public interface TabColorizer
         {
             int GetIndicatorColor(int position);
@@ -45,58 +40,45 @@ namespace QuestionnaireAndroidApp
 
         public SlidingTabScrollView(Context context, IAttributeSet attrs, int defaultStyle) : base(context, attrs, defaultStyle)
         {
-            //Disable the scrtoll bar
-
+            //Disable the scroll bar  
             HorizontalScrollBarEnabled = false;
 
-            //Make sure the tab strips fill the view
-
+            //Make sure the tab strips fill the view  
             FillViewport = true;
-            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0xE5, 0xE5, 0xE5));
+            this.SetBackgroundColor(Android.Graphics.Color.Rgb(0xE5, 0xE5, 0xE5)); //Gray color  
 
             mTitleOffset = (int)(TITLE_OFFSET_DIPS * Resources.DisplayMetrics.Density);
 
             mTabStrip = new SlidingTabStrip(context);
-
             this.AddView(mTabStrip, LayoutParams.MatchParent, LayoutParams.MatchParent);
-
-
         }
 
-        public TabColorizer CustomTabColorizerP
+        public TabColorizer CustomTabColorizer
         {
-            set
-            {
-                mTabStrip.CustomTabColorizer = value;
-            }
+            set { mTabStrip.CustomTabColorizer = value; }
         }
+
         public int[] SelectedIndicatorColor
         {
-            set
-            {
-                mTabStrip.SelectedIndicatorColors = value;
-            }
+            set { mTabStrip.SelectedIndicatorColors = value; }
         }
-        public int[] DividerColor
+
+        public int[] DividerColors
         {
-            set
-            {
-                mTabStrip.DividerColors = value;
-            }
+            set { mTabStrip.DividerColors = value; }
         }
 
         public ViewPager.IOnPageChangeListener OnPageListener
         {
-            set
-            {
-                mViewPagerPageChangeListener = value;
-            }
+            set { mViewPagerPageChangeListener = value; }
         }
+
         public ViewPager ViewPager
         {
             set
             {
                 mTabStrip.RemoveAllViews();
+
                 mViewPager = value;
                 if (value != null)
                 {
@@ -108,15 +90,17 @@ namespace QuestionnaireAndroidApp
             }
         }
 
-        private void value_PageScrolled(object sender, ViewPager.PageScrolledEventArgs e)
+        void value_PageScrolled(object sender, ViewPager.PageScrolledEventArgs e)
         {
             int tabCount = mTabStrip.ChildCount;
+
             if ((tabCount == 0) || (e.Position < 0) || (e.Position >= tabCount))
             {
-                //No need to scroll!
+                //if any of these conditions apply, return, no need to scroll  
                 return;
             }
-            mTabStrip.OnViewPagerPageChange(e.Position, e.PositionOffset);
+
+            mTabStrip.OnViewPagerPageChanged(e.Position, e.PositionOffset);
 
             View selectedTitle = mTabStrip.GetChildAt(e.Position);
 
@@ -128,34 +112,39 @@ namespace QuestionnaireAndroidApp
             {
                 mViewPagerPageChangeListener.OnPageScrolled(e.Position, e.PositionOffset, e.PositionOffsetPixels);
             }
+
         }
 
-        private void value_PageScrollStateChanged(object sender, ViewPager.PageScrollStateChangedEventArgs e)
+        void value_PageScrollStateChanged(object sender, ViewPager.PageScrollStateChangedEventArgs e)
         {
             mScrollState = e.State;
+
             if (mViewPagerPageChangeListener != null)
             {
                 mViewPagerPageChangeListener.OnPageScrollStateChanged(e.State);
             }
         }
 
-        private void value_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
+        void value_PageSelected(object sender, ViewPager.PageSelectedEventArgs e)
         {
             if (mScrollState == ViewPager.ScrollStateIdle)
             {
-                mTabStrip.OnViewPagerPageChange(e.Position, 0f);
+                mTabStrip.OnViewPagerPageChanged(e.Position, 0f);
                 ScrollToTab(e.Position, 0);
+
             }
+
             if (mViewPagerPageChangeListener != null)
             {
                 mViewPagerPageChangeListener.OnPageSelected(e.Position);
             }
         }
-        public void PopulateTabStrip()
+
+        private void PopulateTabStrip()
         {
             PagerAdapter adapter = mViewPager.Adapter;
 
-            for(int i = 0; i < adapter.Count; i++)
+            for (int i = 0; i < adapter.Count; i++)
             {
                 TextView tabView = CreateDefaultTabView(Context);
                 tabView.Text = ((SlidingTabsFragment.SamplePagerAdapter)adapter).GetHeaderTitle(i);
@@ -164,13 +153,14 @@ namespace QuestionnaireAndroidApp
                 tabView.Click += tabView_Click;
                 mTabStrip.AddView(tabView);
             }
+
         }
 
-        private void tabView_Click(object sender, EventArgs e)
+        void tabView_Click(object sender, EventArgs e)
         {
             TextView clickTab = (TextView)sender;
-            int pageToScroll = (int)clickTab.Tag;
-            mViewPager.CurrentItem = pageToScroll;
+            int pageToScrollTo = (int)clickTab.Tag;
+            mViewPager.CurrentItem = pageToScrollTo;
         }
 
         private TextView CreateDefaultTabView(Android.Content.Context context)
@@ -186,43 +176,52 @@ namespace QuestionnaireAndroidApp
                 Context.Theme.ResolveAttribute(Android.Resource.Attribute.SelectableItemBackground, outValue, false);
                 textView.SetBackgroundResource(outValue.ResourceId);
             }
+
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.IceCreamSandwich)
             {
                 textView.SetAllCaps(true);
-
             }
+
             int padding = (int)(TAB_VIEW_PADDING_DIPS * Resources.DisplayMetrics.Density);
             textView.SetPadding(padding, padding, padding, padding);
+
             return textView;
         }
 
         protected override void OnAttachedToWindow()
         {
             base.OnAttachedToWindow();
+
             if (mViewPager != null)
             {
                 ScrollToTab(mViewPager.CurrentItem, 0);
             }
         }
+
         private void ScrollToTab(int tabIndex, int extraOffset)
         {
             int tabCount = mTabStrip.ChildCount;
-            if(tabCount==0 || tabIndex<0 || tabIndex >= tabCount)
+
+            if (tabCount == 0 || tabIndex < 0 || tabIndex >= tabCount)
             {
-                //No need to scroll!
+                //No need to go further, dont scroll  
                 return;
             }
+
             View selectedChild = mTabStrip.GetChildAt(tabIndex);
             if (selectedChild != null)
             {
                 int scrollAmountX = selectedChild.Left + extraOffset;
-                if(tabCount>0 || extraOffset > 0)
+
+                if (tabIndex > 0 || extraOffset > 0)
                 {
                     scrollAmountX -= mTitleOffset;
                 }
-                this.ScrollTo(scrollAmountX, 0);
 
+                this.ScrollTo(scrollAmountX, 0);
             }
+
         }
+
     }
 }
