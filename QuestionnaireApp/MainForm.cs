@@ -53,7 +53,6 @@ namespace QuestionannaireApp
         public bool[] answerArray = new bool[5];
         public string[] answeredQuestuins = new string[10];
         public string[] questions = new string[4];
-        public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
         public string[] examCorrectQuestions = new string[20];
         public string[] examWrongQuestions = new string[20];
         public int[] corrIndexes = new int[20];
@@ -61,10 +60,12 @@ namespace QuestionannaireApp
         public int[] versionCheckArray = new int[3];
 
 
-        public string currentVersion = "0.2.4";
-        public int[] currentVersionArray = { 0, 2, 4 };
-        public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6", "0.2.0","0.2.1","0.2.2","0.2.3"};
-        
+        //Deprecated custom UpdateManager. CodeDead UpdateManager used instead - https://github.com/CodeDead/UpdateManager
+        //public string[] files = { "QuestionannaireApp.exe", "questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
+        //public string currentVersion = "0.2.4";
+        //public int[] currentVersionArray = { 0, 2, 4 };
+        //public string[] previousVersions = { "0.0.1", "0.0.2", "0.0.3", "0.1.1","0.1.2","0.1.3","0.1.4","0.1.5", "0.1.6", "0.2.0","0.2.1","0.2.2","0.2.3"};
+
         public MainForm()
         {
             InitializeComponent();
@@ -72,22 +73,31 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            foreach(string element in previousVersions)
-            if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element)))
-            {
-                File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element));
-                System.Threading.Thread.Sleep(50);
-            }
+            UpdateManager update = new UpdateManager();
+            update.checkUpdate();
+            //try
+            //{
+            //    updateManager.CheckForUpdate(true, true);
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message, "Questionnaire Application", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+
+            //Deprecated custom UpdateManager. CodeDead UpdateManager used instead - https://github.com/CodeDead/UpdateManager
+            //foreach (string element in previousVersions)
+            //if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element)))
+            //{
+            //    File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + element));
+            //    System.Threading.Thread.Sleep(50);
+            //}
             //if (File.Exists(AppDomain.CurrentDomain.BaseDirectory + files[0]))
             //{
             //    File.Delete(AppDomain.CurrentDomain.BaseDirectory + files[0]);
             //}
-            
-
-
-            System.Threading.Thread.Sleep(1000);
-            update();
-            File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
+            //System.Threading.Thread.Sleep(1000);
+            //update();
+            //File.Delete(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
 
             textBoxes[0] = answerBoxA;
             textBoxes[1] = answerBoxB;
@@ -847,54 +857,55 @@ namespace QuestionannaireApp
             }
             return builder.ToString();
         }
-        public void update()
-        {
-            int verPos = 0;
-            using (var client = new System.Net.WebClient())
-            {
-                client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version.txt");
-            }
-            string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
-            for (int y = 0; y < verCheck.Length; y++)
-            {
-                versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
-            }
+
+        //public void update()
+        //{
+        //    int verPos = 0;
+        //    using (var client = new System.Net.WebClient())
+        //    {
+        //        client.DownloadFile("https://raw.githubusercontent.com/lyfenwebos/QuestionnaireApp/master/QuestionnaireApp/VersionInfo.txt", "Version.txt");
+        //    }
+        //    string[] verCheck = File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Version.txt");
+        //    for (int y = 0; y < verCheck.Length; y++)
+        //    {
+        //        versionCheckArray[y] = Convert.ToInt32(verCheck[y]);
+        //    }
 
 
-            foreach (int element in currentVersionArray)
-            {
-                if (element < versionCheckArray[verPos])
-                {
+        //    foreach (int element in currentVersionArray)
+        //    {
+        //        if (element < versionCheckArray[verPos])
+        //        {
 
-                    using (var client = new System.Net.WebClient())
-                    {
-                        for (int p = 0; p < files.Length; p++)
-                        {
-                            if (p == 0 && !File.Exists(files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck))))
-                            {
-                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
-                            }
-                            else
-                            {
-                                client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p]);
-                            }
+        //            using (var client = new System.Net.WebClient())
+        //            {
+        //                for (int p = 0; p < files.Length; p++)
+        //                {
+        //                    if (p == 0 && !File.Exists(files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck))))
+        //                    {
+        //                        client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+        //                    }
+        //                    else
+        //                    {
+        //                        client.DownloadFile("https://github.com/lyfenwebos/QuestionnaireApp/blob/master/QuestionnaireApp/bin/Release/" + files[p] + "?raw=true", files[p]);
+        //                    }
 
-                        }
+        //                }
 
-                    }
-                    System.Threading.Thread.Sleep(5000);
-                    System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
-                    Application.Exit();
-                    break;
-                }
-                else
-                {
-                    answerBoxA.Text = "Version is up to date";
-                }
-                verPos++;
-            }
+        //            }
+        //            System.Threading.Thread.Sleep(5000);
+        //            System.Diagnostics.Process.Start(AppDomain.CurrentDomain.BaseDirectory + files[0].Insert(18, " - " + ConvertStringArrayToString(verCheck)));
+        //            Application.Exit();
+        //            break;
+        //        }
+        //        else
+        //        {
+        //            answerBoxA.Text = "Version is up to date";
+        //        }
+        //        verPos++;
+        //    }
 
-        }
+        //}
     }
 
 
