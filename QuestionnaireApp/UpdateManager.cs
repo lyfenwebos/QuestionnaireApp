@@ -7,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace QuestionannaireApp
 {
@@ -44,11 +45,20 @@ namespace QuestionannaireApp
         public void checkUpdate()
         {
             System.Xml.XmlDocument VersionInfo = new System.Xml.XmlDocument();
-            VersionInfo.LoadXml(GetWebPage("http://localhost/update.xml"));
+            VersionInfo.LoadXml(GetWebPage("http://46.16.119.202/update/update.xml"));
 
             if (VersionInfo.SelectSingleNode("//latestversion").InnerText != Application.ProductVersion)
             {
+                var files = VersionInfo.DocumentElement.SelectNodes("//updatedfile");
                 MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText));
+                using (var client = new System.Net.WebClient())
+                {
+                    foreach(XmlNode element in files)
+                    {
+                        client.DownloadFile("http://46.16.119.202/update/" + element.InnerText, element.InnerText);
+                    }
+                   
+                }
             }
 
             //textDescription.Text = VersionInfo.SelectSingleNode("//description").InnerText;
