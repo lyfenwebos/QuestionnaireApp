@@ -14,9 +14,23 @@ namespace QuestionannaireApp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            UpdateManager updateManager = new UpdateManager();
+            if (updateManager.CheckConnection() == true)
+            {
+                updateManager.CheckUpdate();
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainForm());
+            }
+            else
+            {
+                MessageBox.Show("We are experiencing some problems with connection right now", "Connection can't be established!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new MainForm());
+            }
+
         }
     }
 }

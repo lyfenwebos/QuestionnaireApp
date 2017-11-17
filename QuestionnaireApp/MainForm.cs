@@ -73,8 +73,6 @@ namespace QuestionannaireApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            UpdateManager update = new UpdateManager();
-            update.checkUpdate();
             //try
             //{
             //    updateManager.CheckForUpdate(true, true);
@@ -126,16 +124,10 @@ namespace QuestionannaireApp
 
         private void questionsBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //for (int k = 0;k< answerArray.Length; k++)
-            //{
-            //    answerArray[k] = false;
-            //}
-            answerA = false;
-            answerB = false;
-            answerC = false;
-            answerD = false;
-            answerE = false;
-
+            for (int k = 0; k < answerArray.Length; k++)
+            {
+                answerArray[k] = false;
+            }
             verified = false;
 
             foreach (CheckBox element in checkBoxes)
@@ -178,62 +170,77 @@ namespace QuestionannaireApp
                         //logfile[y] = aStringBuilder.ToString();
 
                         position = y;
+                        for (int i = 0; i < textBoxes.Length; i++)
+                        {
+                            if (position == index + (i + 1))
+                            {
+                                textBoxes[i].Text = aStringBuilder.ToString();
+                                answerArray[i] = true;
+                            }
 
-                        if (position == index + 1)
-                        {
-                            answerBoxA.Text = aStringBuilder.ToString();
-
-                            answerA = true;
-                            //checkBox1.Checked = true;
-                        }
-                        else if (position == index + 2)
-                        {
-                            answerBoxB.Text = aStringBuilder.ToString();
-                            answerB = true;
-                            //checkBox2.Checked = true;
-                        }
-                        else if (position == index + 3)
-                        {
-                            answerBoxC.Text = aStringBuilder.ToString();
-                            answerC = true;
-                            //checkBox3.Checked = true;
-                        }
-                        else if (position == index + 4)
-                        {
-                            answerBoxD.Text = aStringBuilder.ToString();
-                            answerD = true;
-                            //checkBox4.Checked = true;
-                        }
-                        else if (position == index + 5)
-                        {
-                            answerBoxE.Text = aStringBuilder.ToString();
-                            answerE = true;
-                            //checkBox5.Checked = true;
                         }
 
+                        //if (position == index + 1)
+                        //{
+                        //    answerBoxA.Text = aStringBuilder.ToString();
+
+                        //    answerA = true;
+                        //    //checkBox1.Checked = true;
+                        //}
+                        //else if (position == index + 2)
+                        //{
+                        //    answerBoxB.Text = aStringBuilder.ToString();
+                        //    answerB = true;
+                        //    //checkBox2.Checked = true;
+                        //}
+                        //else if (position == index + 3)
+                        //{
+                        //    answerBoxC.Text = aStringBuilder.ToString();
+                        //    answerC = true;
+                        //    //checkBox3.Checked = true;
+                        //}
+                        //else if (position == index + 4)
+                        //{
+                        //    answerBoxD.Text = aStringBuilder.ToString();
+                        //    answerD = true;
+                        //    //checkBox4.Checked = true;
+                        //}
+                        //else if (position == index + 5)
+                        //{
+                        //    answerBoxE.Text = aStringBuilder.ToString();
+                        //    answerE = true;
+                        //    //checkBox5.Checked = true;
+                        //}
 
                     }
                 }
-                if (answerBoxA.Text == "")
+                for (int i = 0; i < textBoxes.Length; i++)
                 {
-                    answerBoxA.Text = logfile[index + 1];
+                    if (textBoxes[i].Text == "")
+                    {
+                        textBoxes[i].Text = logfile[index + (i + 1)];
+                    }
                 }
-                if (answerBoxB.Text == "")
-                {
-                    answerBoxB.Text = logfile[index + 2];
-                }
-                if (answerBoxC.Text == "")
-                {
-                    answerBoxC.Text = logfile[index + 3];
-                }
-                if (answerBoxD.Text == "")
-                {
-                    answerBoxD.Text = logfile[index + 4];
-                }
-                if (answerBoxE.Text == "")
-                {
-                    answerBoxE.Text = logfile[index + 5];
-                }
+                //if (answerBoxA.Text == "")
+                //{
+                //    answerBoxA.Text = logfile[index + 1];
+                //}
+                //if (answerBoxB.Text == "")
+                //{
+                //    answerBoxB.Text = logfile[index + 2];
+                //}
+                //if (answerBoxC.Text == "")
+                //{
+                //    answerBoxC.Text = logfile[index + 3];
+                //}
+                //if (answerBoxD.Text == "")
+                //{
+                //    answerBoxD.Text = logfile[index + 4];
+                //}
+                //if (answerBoxE.Text == "")
+                //{
+                //    answerBoxE.Text = logfile[index + 5];
+                //}
             }
             else if (exam)
             {
@@ -314,89 +321,108 @@ namespace QuestionannaireApp
 
                         position = y;
 
-                        if (position == oPosition + 1)
+                        for (int i = 0; i < textBoxes.Length; i++)
                         {
-                            answerBoxA.Text = aStringBuilder.ToString();
+                            if (position == oPosition + (i + 1))
+                            {
+                                textBoxes[i].Text = aStringBuilder.ToString();
+                                answerArray[i] = true;
+                            }
 
-                            answerA = true;
-                            //checkBox1.Checked = true;
                         }
-                        else if (position == oPosition + 2)
+
+                        //    if (position == oPosition + 1)
+                        //    {
+                        //        answerBoxA.Text = aStringBuilder.ToString();
+
+                        //        answerA = true;
+                        //        //checkBox1.Checked = true;
+                        //    }
+                        //    else if (position == oPosition + 2)
+                        //    {
+                        //        answerBoxB.Text = aStringBuilder.ToString();
+                        //        answerB = true;
+                        //        //checkBox2.Checked = true;
+                        //    }
+                        //    else if (position == oPosition + 3)
+                        //    {
+                        //        answerBoxC.Text = aStringBuilder.ToString();
+                        //        answerC = true;
+                        //        //checkBox3.Checked = true;
+                        //    }
+                        //    else if (position == oPosition + 4)
+                        //    {
+                        //        answerBoxD.Text = aStringBuilder.ToString();
+                        //        answerD = true;
+                        //        //checkBox4.Checked = true;
+                        //    }
+                        //    else if (position == oPosition + 5)
+                        //    {
+                        //        answerBoxE.Text = aStringBuilder.ToString();
+                        //        answerE = true;
+                        //        //checkBox5.Checked = true;
+                        //    }
+                        //}
+                    }
+                    for (int i = 0; i < textBoxes.Length; i++)
+                    {
+                        if (textBoxes[i].Text == "")
                         {
-                            answerBoxB.Text = aStringBuilder.ToString();
-                            answerB = true;
-                            //checkBox2.Checked = true;
-                        }
-                        else if (position == oPosition + 3)
-                        {
-                            answerBoxC.Text = aStringBuilder.ToString();
-                            answerC = true;
-                            //checkBox3.Checked = true;
-                        }
-                        else if (position == oPosition + 4)
-                        {
-                            answerBoxD.Text = aStringBuilder.ToString();
-                            answerD = true;
-                            //checkBox4.Checked = true;
-                        }
-                        else if (position == oPosition + 5)
-                        {
-                            answerBoxE.Text = aStringBuilder.ToString();
-                            answerE = true;
-                            //checkBox5.Checked = true;
+                            textBoxes[i].Text = logfile[oPosition + (i + 1)];
                         }
                     }
-                }
-                if (answerBoxA.Text == "")
-                {
-                    answerBoxA.Text = logfile[oPosition + 1];
-                }
-                if (answerBoxB.Text == "")
-                {
-                    answerBoxB.Text = logfile[oPosition + 2];
-                }
-                if (answerBoxC.Text == "")
-                {
-                    answerBoxC.Text = logfile[oPosition + 3];
-                }
-                if (answerBoxD.Text == "")
-                {
-                    answerBoxD.Text = logfile[oPosition + 4];
-                }
-                if (answerBoxE.Text == "")
-                {
-                    answerBoxE.Text = logfile[oPosition + 5];
+
+                                        //if (answerBoxA.Text == "")
+                    //{
+                    //    answerBoxA.Text = logfile[oPosition + 1];
+                    //}
+                    //if (answerBoxB.Text == "")
+                    //{
+                    //    answerBoxB.Text = logfile[oPosition + 2];
+                    //}
+                    //if (answerBoxC.Text == "")
+                    //{
+                    //    answerBoxC.Text = logfile[oPosition + 3];
+                    //}
+                    //if (answerBoxD.Text == "")
+                    //{
+                    //    answerBoxD.Text = logfile[oPosition + 4];
+                    //}
+                    //if (answerBoxE.Text == "")
+                    //{
+                    //    answerBoxE.Text = logfile[oPosition + 5];
+                    //}
+
                 }
 
+
+
+                //if(position1== index +1 || position1 == index + 2)
+                //{
+                //    answerA = true;
+                //    radioButton1.Checked = true;
+                //}
+                //else if (position1 == index + 3 || position1 == index + 4)
+                //{
+                //    answerB = true;
+                //    radioButton2.Checked = true;
+                //}
+                //else if (position1 == index + 5 || position1 == index + 6)
+                //{
+                //    answerC = true;
+                //    radioButton3.Checked = true;
+                //}
+                //else if (position1 == index + 7 || position1 == index + 8)
+                //{
+                //    answerD = true;
+                //    radioButton4.Checked = true;
+                //}
+                //else if (position1 == index + 9 || position1 == index + 10)
+                //{
+                //    answerE = true;
+                //    radioButton5.Checked = true;
+                //}
             }
-
-           
-
-            //if(position1== index +1 || position1 == index + 2)
-            //{
-            //    answerA = true;
-            //    radioButton1.Checked = true;
-            //}
-            //else if (position1 == index + 3 || position1 == index + 4)
-            //{
-            //    answerB = true;
-            //    radioButton2.Checked = true;
-            //}
-            //else if (position1 == index + 5 || position1 == index + 6)
-            //{
-            //    answerC = true;
-            //    radioButton3.Checked = true;
-            //}
-            //else if (position1 == index + 7 || position1 == index + 8)
-            //{
-            //    answerD = true;
-            //    radioButton4.Checked = true;
-            //}
-            //else if (position1 == index + 9 || position1 == index + 10)
-            //{
-            //    answerE = true;
-            //    radioButton5.Checked = true;
-            //}
         }
 
         public void fileLoad()
@@ -434,80 +460,92 @@ namespace QuestionannaireApp
             //Answer A && checkBox1
             if (exam == false)
             {
-                if (answerA == true && checkBox1.Checked == true)
+                for(int i = 0; i < answerArray.Length; i++)
                 {
-                    answerBoxA.BackColor = Color.Green;
-                    count++;
+                    if(answerArray[i]==true && checkBoxes[i].Checked == true)
+                    {
+                        textBoxes[i].BackColor = Color.Green;
+                        count++;
+                    }
+                    else if(answerArray[i]==false && checkBoxes[i].Checked == true)
+                    {
+                        textBoxes[i].BackColor = Color.Red;
+                    }
                 }
-                else if (answerA == false && checkBox1.Checked == true)
-                {
-                    answerBoxA.BackColor = Color.Red;
-                }
-                else if (answerA == false && checkBox1.Checked == false)
-                {
-                    answerBoxA.BackColor = Color.WhiteSmoke;
-                }
+                //if (answerA == true && checkBox1.Checked == true)
+                //{
+                //    answerBoxA.BackColor = Color.Green;
+                //    count++;
+                //}
+                //else if (answerA == false && checkBox1.Checked == true)
+                //{
+                //    answerBoxA.BackColor = Color.Red;
+                //}
+                //else if (answerA == false && checkBox1.Checked == false)
+                //{
+                //    answerBoxA.BackColor = Color.WhiteSmoke;
+                //}
 
-                //Asnwer B && checkBox2
-                if (answerB == true && checkBox2.Checked == true)
-                {
-                    answerBoxB.BackColor = Color.Green;
-                    count++;
-                }
-                else if (answerB == false && checkBox2.Checked == true)
-                {
-                    answerBoxB.BackColor = Color.Red;
-                }
-                else if (answerB == false && checkBox2.Checked == false)
-                {
-                    answerBoxB.BackColor = Color.WhiteSmoke;
-                }
+                ////Asnwer B && checkBox2
+                //if (answerB == true && checkBox2.Checked == true)
+                //{
+                //    answerBoxB.BackColor = Color.Green;
+                //    count++;
+                //}
+                //else if (answerB == false && checkBox2.Checked == true)
+                //{
+                //    answerBoxB.BackColor = Color.Red;
+                //}
+                //else if (answerB == false && checkBox2.Checked == false)
+                //{
+                //    answerBoxB.BackColor = Color.WhiteSmoke;
+                //}
 
-                //Answer C && checkBox3
-                if (answerC == true && checkBox3.Checked == true)
-                {
-                    answerBoxC.BackColor = Color.Green;
-                    count++;
-                }
-                else if (answerC == false && checkBox3.Checked == true)
-                {
-                    answerBoxC.BackColor = Color.Red;
-                }
-                else if (answerC == false && checkBox3.Checked == false)
-                {
-                    answerBoxC.BackColor = Color.WhiteSmoke;
-                }
+                ////Answer C && checkBox3
+                //if (answerC == true && checkBox3.Checked == true)
+                //{
+                //    answerBoxC.BackColor = Color.Green;
+                //    count++;
+                //}
+                //else if (answerC == false && checkBox3.Checked == true)
+                //{
+                //    answerBoxC.BackColor = Color.Red;
+                //}
+                //else if (answerC == false && checkBox3.Checked == false)
+                //{
+                //    answerBoxC.BackColor = Color.WhiteSmoke;
+                //}
 
-                //Answer D && checkBox4
-                if (answerD == true && checkBox4.Checked == true)
-                {
-                    answerBoxD.BackColor = Color.Green;
-                    count++;
-                }
-                else if (answerD == false && checkBox4.Checked == true)
-                {
-                    answerBoxD.BackColor = Color.Red;
-                }
-                else if (answerD == false && checkBox4.Checked == false)
-                {
-                    answerBoxD.BackColor = Color.WhiteSmoke;
-                }
+                ////Answer D && checkBox4
+                //if (answerD == true && checkBox4.Checked == true)
+                //{
+                //    answerBoxD.BackColor = Color.Green;
+                //    count++;
+                //}
+                //else if (answerD == false && checkBox4.Checked == true)
+                //{
+                //    answerBoxD.BackColor = Color.Red;
+                //}
+                //else if (answerD == false && checkBox4.Checked == false)
+                //{
+                //    answerBoxD.BackColor = Color.WhiteSmoke;
+                //}
 
-                //Answer E && checkBox5
-                if (answerE == true && checkBox5.Checked == true)
-                {
-                    answerBoxE.BackColor = Color.Green;
+                ////Answer E && checkBox5
+                //if (answerE == true && checkBox5.Checked == true)
+                //{
+                //    answerBoxE.BackColor = Color.Green;
 
-                    count++;
-                }
-                else if (answerE == false && checkBox5.Checked == true)
-                {
-                    answerBoxE.BackColor = Color.Red;
-                }
-                else if (answerE == false && checkBox5.Checked == false)
-                {
-                    answerBoxE.BackColor = Color.WhiteSmoke;
-                }
+                //    count++;
+                //}
+                //else if (answerE == false && checkBox5.Checked == true)
+                //{
+                //    answerBoxE.BackColor = Color.Red;
+                //}
+                //else if (answerE == false && checkBox5.Checked == false)
+                //{
+                //    answerBoxE.BackColor = Color.WhiteSmoke;
+                //}
 
                 if (count == correctAnswers)
                 {
@@ -515,39 +553,43 @@ namespace QuestionannaireApp
                     //answeredQuestuins[indexChecked-1]=
                 }
 
-                foreach (CheckBox element in checkBoxes)
-                {
-                    element.Checked = false;
-                }
-
                 verified = true;
             }
             else if (exam == true)
             {
-                if (answerA == true && checkBox1.Checked == true)
+                for (int i = 0; i < answerArray.Length; i++)
                 {
-                    count++;
+                    if (answerArray[i] == true && checkBoxes[i].Checked == true)
+                    {
+                        count++;
+                    }
                 }
 
-                if (answerB == true && checkBox2.Checked == true)
-                {
-                    count++;
-                }
+                
+                //if (answerA == true && checkBox1.Checked == true)
+                //{
+                //    count++;
+                //}
 
-                if (answerC == true && checkBox3.Checked == true)
-                {
-                    count++;
-                }
+                //if (answerB == true && checkBox2.Checked == true)
+                //{
+                //    count++;
+                //}
 
-                if (answerD == true && checkBox4.Checked == true)
-                {
-                    count++;
-                }
+                //if (answerC == true && checkBox3.Checked == true)
+                //{
+                //    count++;
+                //}
 
-                if (answerE == true && checkBox5.Checked == true)
-                {
-                    count++;
-                }
+                //if (answerD == true && checkBox4.Checked == true)
+                //{
+                //    count++;
+                //}
+
+                //if (answerE == true && checkBox5.Checked == true)
+                //{
+                //    count++;
+                //}
 
                 if(count == correctAnswers)
                 {
@@ -761,11 +803,10 @@ namespace QuestionannaireApp
             backButton.Enabled = false;
             //questionsBox.Enabled = false;
 
-            answerA = false;
-            answerB = false;
-            answerC = false;
-            answerD = false;
-            answerE = false;
+            for (int k = 0; k < answerArray.Length; k++)
+            {
+                answerArray[k] = false;
+            }
 
             foreach (CheckBox element in checkBoxes)
             {

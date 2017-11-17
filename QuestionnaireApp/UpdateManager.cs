@@ -15,7 +15,7 @@ namespace QuestionannaireApp
     {
         public static string GetWebPage(string URL)
         {
-            System.Net.HttpWebRequest Request = (HttpWebRequest)(WebRequest.Create(new Uri(URL)));
+            HttpWebRequest Request = (HttpWebRequest)(WebRequest.Create(new Uri(URL)));
             Request.Method = "GET";
             Request.MaximumAutomaticRedirections = 4;
             Request.MaximumResponseHeadersLength = 4;
@@ -42,27 +42,54 @@ namespace QuestionannaireApp
 
             return ResponseText;
         }
-        public void checkUpdate()
+        public void CheckUpdate()
         {
-            System.Xml.XmlDocument VersionInfo = new System.Xml.XmlDocument();
+            XmlDocument VersionInfo = new XmlDocument();
             VersionInfo.LoadXml(GetWebPage("http://46.16.119.202/update/update.xml"));
+            
 
             if (VersionInfo.SelectSingleNode("//latestversion").InnerText != Application.ProductVersion)
             {
                 var files = VersionInfo.DocumentElement.SelectNodes("//updatedfile");
-                MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText));
-                using (var client = new System.Net.WebClient())
+                DialogResult result =  MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText), "New Version is available!",MessageBoxButtons.YesNo,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
+                if (result == DialogResult.Yes)
                 {
-                    foreach(XmlNode element in files)
+                    using (var client = new WebClient())
                     {
-                        client.DownloadFile("http://46.16.119.202/update/" + element.InnerText, element.InnerText);
+                        foreach (XmlNode element in files)
+                        {
+                            client.DownloadFile("http://46.16.119.202/update/" + element.InnerText, element.InnerText);
+                        }
+
                     }
-                   
                 }
             }
 
             //textDescription.Text = VersionInfo.SelectSingleNode("//description").InnerText;
 
+        }
+        public bool CheckConnection()
+        {
+            WebRequest request = WebRequest.Create("http://46.16.119.202");
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                if (response == null || response.StatusCode != HttpStatusCode.OK)
+                {
+                    response.Close();
+                    return false;
+                }
+                else if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    response.Close();
+                    return true;
+                }
+            }
+            catch (WebException)
+            {
+                return false;
+            }
+            return false;
         }
 
     }
