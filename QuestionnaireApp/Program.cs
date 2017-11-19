@@ -19,6 +19,7 @@ namespace QuestionannaireApp
             if (updateManager.CheckConnection() == true)
             {
                 updateManager.CheckUpdate();
+                updateManager.CheckForCorrupted();
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new MainForm());

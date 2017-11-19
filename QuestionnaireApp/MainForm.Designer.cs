@@ -52,6 +52,7 @@
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.questionBox = new System.Windows.Forms.TextBox();
             this.randomCheckBox = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -356,6 +357,7 @@
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.TextBox questionBox;
         private System.Windows.Forms.CheckBox randomCheckBox;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

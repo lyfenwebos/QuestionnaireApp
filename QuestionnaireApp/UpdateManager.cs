@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -46,12 +47,12 @@ namespace QuestionannaireApp
         {
             XmlDocument VersionInfo = new XmlDocument();
             VersionInfo.LoadXml(GetWebPage("http://46.16.119.202/update/update.xml"));
-            
+
 
             if (VersionInfo.SelectSingleNode("//latestversion").InnerText != Application.ProductVersion)
             {
                 var files = VersionInfo.DocumentElement.SelectNodes("//updatedfile");
-                DialogResult result =  MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText), "New Version is available!",MessageBoxButtons.YesNo,MessageBoxIcon.Information,MessageBoxDefaultButton.Button1);
+                DialogResult result = MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText), "New Version is available!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     using (var client = new WebClient())
@@ -70,29 +71,56 @@ namespace QuestionannaireApp
         }
         public bool CheckConnection()
         {
+            ProgressBox progressBox = new ProgressBox();
+            progressBox.Show();
+
             WebRequest request = WebRequest.Create("http://46.16.119.202");
-            try
-            {
-                HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-                if (response == null || response.StatusCode != HttpStatusCode.OK)
+                try
                 {
+                progressBox.progressBar1.Increment(10);
+                    HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                    if (response == null || response.StatusCode != HttpStatusCode.OK)
+                    {
+                    progressBox.progressBar1.Increment(10);
                     response.Close();
-                    return false;
+                        return false;
+                    }
+                    else if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                    progressBox.progressBar1.Increment(10);
+                    response.Close();
+                        return true;
+                    }
                 }
-                else if (response.StatusCode == HttpStatusCode.OK)
+                catch (WebException)
                 {
-                    response.Close();
-                    return true;
-                }
-            }
-            catch (WebException)
-            {
+                progressBox.progressBar1.Value = 50;
                 return false;
+                }
+
+                return false;
+            
+        }
+        public void CheckForCorrupted()
+        {
+            string location = AppDomain.CurrentDomain.BaseDirectory;
+            string[] files = { location + "questions1.txt", location + "questions2.txt", location + "questions3.txt", location + "questions4.txt" };
+            foreach (string element in files)
+            {
+                if (!File.Exists(element))
+                {
+                    using (var client = new WebClient())
+                    {
+                        client.DownloadFile("http://46.16.119.202/update/" + element, element);
+                    }
+                }
             }
-            return false;
+
         }
 
     }
-
 }
+
+
+
 
