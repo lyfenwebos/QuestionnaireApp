@@ -14,6 +14,7 @@ namespace QuestionannaireApp
 {
     public class UpdateManager
     {
+        public string address = "http://46.101.148.248/";
         public static string GetWebPage(string URL)
         {
             HttpWebRequest Request = (HttpWebRequest)(WebRequest.Create(new Uri(URL)));
@@ -43,11 +44,10 @@ namespace QuestionannaireApp
 
             return ResponseText;
         }
-        public void CheckUpdate()
+        public bool CheckUpdate()
         {
             XmlDocument VersionInfo = new XmlDocument();
-            VersionInfo.LoadXml(GetWebPage("http://46.16.119.202/update/update.xml"));
-
+            VersionInfo.LoadXml(GetWebPage(address+"update/update.xml"));
 
             if (VersionInfo.SelectSingleNode("//latestversion").InnerText != Application.ProductVersion)
             {
@@ -59,42 +59,47 @@ namespace QuestionannaireApp
                     {
                         foreach (XmlNode element in files)
                         {
-                            client.DownloadFile("http://46.16.119.202/update/" + element.InnerText, element.InnerText);
+                            client.DownloadFile(address+"update/" + element.InnerText, element.InnerText);
+                            System.Threading.Thread.Sleep(50);
+
                         }
 
                     }
                 }
+                else
+                {
+                    return false;
+                }
             }
+            return false;
 
             //textDescription.Text = VersionInfo.SelectSingleNode("//description").InnerText;
 
         }
         public bool CheckConnection()
         {
-            ProgressBox progressBox = new ProgressBox();
-            progressBox.Show();
 
-            WebRequest request = WebRequest.Create("http://46.16.119.202");
+            WebRequest request = WebRequest.Create(address);
                 try
                 {
-                progressBox.progressBar1.Increment(10);
+
                     HttpWebResponse response = (HttpWebResponse)request.GetResponse();
                     if (response == null || response.StatusCode != HttpStatusCode.OK)
                     {
-                    progressBox.progressBar1.Increment(10);
+                    System.Threading.Thread.Sleep(500);
                     response.Close();
                         return false;
                     }
                     else if (response.StatusCode == HttpStatusCode.OK)
                     {
-                    progressBox.progressBar1.Increment(10);
+                    System.Threading.Thread.Sleep(50);
                     response.Close();
                         return true;
                     }
                 }
                 catch (WebException)
                 {
-                progressBox.progressBar1.Value = 50;
+                System.Threading.Thread.Sleep(500);
                 return false;
                 }
 
@@ -103,21 +108,21 @@ namespace QuestionannaireApp
         }
         public void CheckForCorrupted()
         {
-            string location = AppDomain.CurrentDomain.BaseDirectory;
-            string[] files = { location + "questions1.txt", location + "questions2.txt", location + "questions3.txt", location + "questions4.txt" };
+            //string location = AppDomain.CurrentDomain.BaseDirectory;
+            string[] files = {"questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
             foreach (string element in files)
             {
                 if (!File.Exists(element))
                 {
                     using (var client = new WebClient())
                     {
-                        client.DownloadFile("http://46.16.119.202/update/" + element, element);
+                        client.DownloadFile(address+"update/" + element, element);
+                        System.Threading.Thread.Sleep(50);
                     }
                 }
             }
 
         }
-
     }
 }
 

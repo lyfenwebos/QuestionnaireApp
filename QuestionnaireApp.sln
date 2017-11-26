@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuestionannaireApp", "QuestionnaireApp\QuestionannaireApp.csproj", "{23285C44-A0F6-4FF1-B142-741D4285E039}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{BC422100-1B34-4B67-B9A0-51138BB62766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
@@ -45,6 +47,18 @@ Global
 		{23285C44-A0F6-4FF1-B142-741D4285E039}.Release|iPhone.Build.0 = Release|Any CPU
 		{23285C44-A0F6-4FF1-B142-741D4285E039}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{23285C44-A0F6-4FF1-B142-741D4285E039}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Ad-Hoc|Any CPU.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Ad-Hoc|iPhone.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.AppStore|Any CPU.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.AppStore|iPhone.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.AppStore|iPhoneSimulator.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Debug|Any CPU.ActiveCfg = Debug
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Debug|iPhone.ActiveCfg = Debug
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Debug|iPhoneSimulator.ActiveCfg = Debug
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Release|Any CPU.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Release|iPhone.ActiveCfg = Release
+		{BC422100-1B34-4B67-B9A0-51138BB62766}.Release|iPhoneSimulator.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

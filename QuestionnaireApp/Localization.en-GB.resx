@@ -117,7 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
+  <data name="backButton" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="examTS" xml:space="preserve">
+    <value>Exam</value>
+  </data>
+  <data name="feedbackButton" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="finishButton" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="fontTS" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="languageTS" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="modul1TS" xml:space="preserve">
+    <value>Modul 1</value>
+  </data>
+  <data name="modul2TS" xml:space="preserve">
+    <value>Modul 2</value>
+  </data>
+  <data name="modul3TS" xml:space="preserve">
+    <value>Modul 3</value>
+  </data>
+  <data name="modul4TS" xml:space="preserve">
+    <value>Modul 4</value>
+  </data>
+  <data name="modulTS" xml:space="preserve">
+    <value>Modul</value>
+  </data>
+  <data name="moodulTS" xml:space="preserve">
+    <value>Moodul</value>
+  </data>
+  <data name="nextButton" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="randomCheckBox" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="settingsTS" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="startup" xml:space="preserve">
+    <value>Preparing application...</value>
+  </data>
+  <data name="verifyButton" xml:space="preserve">
+    <value>Verify</value>
+  </data>
 </root>

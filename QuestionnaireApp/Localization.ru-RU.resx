@@ -117,7 +117,55 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
+  <data name="backButton" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="examTS" xml:space="preserve">
+    <value>Экзамен</value>
+  </data>
+  <data name="feedbackButton" xml:space="preserve">
+    <value>Обратная связь</value>
+  </data>
+  <data name="finishButton" xml:space="preserve">
+    <value>Завершить</value>
+  </data>
+  <data name="fontTS" xml:space="preserve">
+    <value>Шрифт</value>
+  </data>
+  <data name="languageTS" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="modul1TS" xml:space="preserve">
+    <value>Модуль 1</value>
+  </data>
+  <data name="modul2TS" xml:space="preserve">
+    <value>Модуль 2</value>
+  </data>
+  <data name="modul3TS" xml:space="preserve">
+    <value>Модуль 3</value>
+  </data>
+  <data name="modul4TS" xml:space="preserve">
+    <value>Модуль 4</value>
+  </data>
+  <data name="modulTS" xml:space="preserve">
+    <value>Модуль</value>
+  </data>
+  <data name="moodulTS" xml:space="preserve">
+    <value>Модуль</value>
+  </data>
+  <data name="nextButton" xml:space="preserve">
+    <value>Следующий</value>
+  </data>
+  <data name="randomCheckBox" xml:space="preserve">
+    <value>Случайно</value>
+  </data>
+  <data name="settingsTS" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="startup" xml:space="preserve">
+    <value>Подгатавливаем приложение...</value>
+  </data>
+  <data name="verifyButton" xml:space="preserve">
+    <value>Проверить</value>
+  </data>
 </root>
