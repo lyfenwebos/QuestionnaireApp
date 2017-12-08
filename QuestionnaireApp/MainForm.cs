@@ -19,10 +19,9 @@ namespace QuestionannaireApp
         public string filename = "";
         public string correctAnswer = "";
         //public string locationEXE = AppDomain.CurrentDomain.BaseDirectory;
-        public string questions1 = AppDomain.CurrentDomain.BaseDirectory + "questions1.txt";
-        public string questions2 = AppDomain.CurrentDomain.BaseDirectory + "questions2.txt";
-        public string questions3 = AppDomain.CurrentDomain.BaseDirectory + "questions3.txt";
-        public string questions4 = AppDomain.CurrentDomain.BaseDirectory + "questions4.txt";
+        public string path = AppDomain.CurrentDomain.BaseDirectory + "Questions//";
+        public string estLanguage = "EST//";
+        public string rusLanguage = "RUS//";
         public string culture = string.Empty;
 
 
@@ -45,13 +44,15 @@ namespace QuestionannaireApp
         public bool answerE;
         public bool correct;
         public bool exam;
+        public bool block=true;
 
         public static string[] logfile;
         public TextBox[] textBoxes = new TextBox[5];
         public CheckBox[] checkBoxes = new CheckBox[5];
         public bool[] answerArray = new bool[5];
         public string[] answeredQuestuins = new string[10];
-        public string[] questions = new string[4];
+        public string[] questionsRus = new string[4];
+        public string[] questionsEst = new string[4];
         public string[] examCorrectQuestions = new string[20];
         public string[] examWrongQuestions = new string[20];
         public int[] corrIndexes = new int[20];
@@ -83,6 +84,7 @@ namespace QuestionannaireApp
                     languageTS.Text = rm.GetString("languageTS");
                     settingsTS.Text = rm.GetString("settingsTS");
                     fontTS.Text = rm.GetString("fontTS");
+                    aboutTS.Text = rm.GetString("aboutTS");
                 }
             }
             catch (System.Exception e)
@@ -114,16 +116,29 @@ namespace QuestionannaireApp
             answerArray[3] = answerD;
             answerArray[4] = answerE;
 
-            questions[0] = questions1;
-            questions[1] = questions2;
-            questions[2] = questions3;
-            questions[3] = questions4;
+            questionsRus[0] = path + rusLanguage + "rusModul1.txt";
+            questionsRus[1] = path + rusLanguage + "rusModul2.txt";
+            questionsRus[2] = path + rusLanguage + "rusModul3.txt";
+            questionsRus[3] = path + rusLanguage + "rusModul4.txt";
+
+            questionsEst[0] = path + estLanguage + "estModul1.txt";
+            questionsEst[1] = path + estLanguage + "estModul2.txt";
+            questionsEst[2] = path + estLanguage + "estModul3.txt";
+            questionsEst[3] = path + estLanguage + "estModul4.txt";
 
 
             rm = new System.Resources.ResourceManager("QuestionannaireApp.Localization", Assembly.GetExecutingAssembly());
-            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Properties.Settings.Default.language);
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Properties.Settings.Default.culture);
             UpdateUIControls();
             UpdateFont(Properties.Settings.Default.fontName, Properties.Settings.Default.fontSize);
+            if (Properties.Settings.Default.block == true)
+            {
+                examTS.Enabled = false;
+            }
+            else
+            {
+                examTS.Enabled = true;
+            }
         }
         public void UpdateFont(string font,float size)
         {
@@ -233,7 +248,14 @@ namespace QuestionannaireApp
                     switch (switchCount)
                     {
                         case 1:
-                            filename = questions1;
+                            if (Properties.Settings.Default.culture == "et-EE")
+                            {
+                                filename = questionsEst[0];
+                            }
+                            else
+                            {
+                                filename = questionsRus[0];
+                            }
                             logfile = File.ReadAllLines(filename);
                             //logfile.ToArray();
                             for (int o = 0; o < logfile.Length; o += 6)
@@ -241,14 +263,21 @@ namespace QuestionannaireApp
                                 if (logfile[o].Contains(word))
                                 {
                                     oPosition = o;
-                                    moodulName.Text = "Модуль №1";
+                                    moodulName.Text = rm.GetString("modul1TS"); ;
                                     done = true;
                                 }
                             }
                             switchCount++;
                             break;
                         case 2:
-                            filename = questions2;
+                            if (Properties.Settings.Default.culture == "et-EE")
+                            {
+                                filename = questionsEst[1];
+                            }
+                            else
+                            {
+                                filename = questionsRus[1];
+                            }
                             logfile = File.ReadAllLines(filename);
                             //logfile.ToArray();
                             for (int o = 0; o < logfile.Length; o += 6)
@@ -256,14 +285,21 @@ namespace QuestionannaireApp
                                 if (logfile[o].Contains(word))
                                 {
                                     oPosition = o;
-                                    moodulName.Text = "Модуль №2";
+                                    moodulName.Text = rm.GetString("modul2TS"); ;
                                     done = true;
                                 }
                             }
                             switchCount++;
                             break;
                         case 3:
-                            filename = questions3;
+                            if (Properties.Settings.Default.culture == "et-EE")
+                            {
+                                filename = questionsEst[2];
+                            }
+                            else
+                            {
+                                filename = questionsRus[2];
+                            }
                             logfile = File.ReadAllLines(filename);
                             //logfile.ToArray();
                             for (int o = 0; o < logfile.Length; o += 6)
@@ -271,14 +307,21 @@ namespace QuestionannaireApp
                                 if (logfile[o].Contains(word))
                                 {
                                     oPosition = o;
-                                    moodulName.Text = "Модуль №3";
+                                    moodulName.Text = rm.GetString("modul3TS"); ;
                                     done = true;
                                 }
                             }
                             switchCount++;
                             break;
                         case 4:
-                            filename = questions4;
+                            if (Properties.Settings.Default.culture == "et-EE")
+                            {
+                                filename = questionsEst[3];
+                            }
+                            else
+                            {
+                                filename = questionsRus[3];
+                            }
                             logfile = File.ReadAllLines(filename);
                             //logfile.ToArray();
                             for (int o = 0; o < logfile.Length; o += 6)
@@ -286,7 +329,7 @@ namespace QuestionannaireApp
                                 if (logfile[o].Contains(word))
                                 {
                                     oPosition = o;
-                                    moodulName.Text = "Модуль №4";
+                                    moodulName.Text = rm.GetString("modul4TS"); ;
                                     done = true;
                                 }
 
@@ -479,7 +522,7 @@ namespace QuestionannaireApp
             {
                 if (exam == false)
                 {
-                    MessageBox.Show("Это последний вопрос!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBox.Show(rm.GetString("lastQuestion"), rm.GetString("attention"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
         }
@@ -512,8 +555,41 @@ namespace QuestionannaireApp
                     }
                 }
 
-                MessageBox.Show("Результат теста: " + "\n" +
-                    "Из " + (Convert.ToInt32(examCorrAnsCount) + Convert.ToInt32(examWrongAnsCount)) + " ответов - " + examCorrAnsCount + " правильных и " + examWrongAnsCount + " неправильных", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            string answers, correct, incorrect;
+            if(examCorrAnsCount ==0 || examCorrAnsCount > 1)
+            {
+                correct = rm.GetString("correctPlural");
+            }
+            else
+            {
+                correct = rm.GetString("correctSingle");
+            }
+
+            if ((Convert.ToInt32(examCorrAnsCount) + Convert.ToInt32(examWrongAnsCount)) == 0 || (Convert.ToInt32(examCorrAnsCount) + Convert.ToInt32(examWrongAnsCount)) > 1)
+            {
+                answers = rm.GetString("answerPlural");
+            }
+            else
+            {
+                answers = rm.GetString("answerSingle");
+            }
+
+            if (examWrongAnsCount == 0 || examWrongAnsCount > 1)
+            {
+                incorrect = rm.GetString("incorrectPlural");
+            }
+            else
+            {
+                incorrect = rm.GetString("incorrectSingle");
+            }
+
+
+            MessageBox.Show(rm.GetString("testResult") + ": " + "\n" +
+                    rm.GetString("from") + " " + (Convert.ToInt32(examCorrAnsCount) + Convert.ToInt32(examWrongAnsCount)) + " " + answers + " - " + examCorrAnsCount + " " + correct + ", " + examWrongAnsCount + " " + incorrect, rm.GetString("attention"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+
+            
                 Array.Clear(examCorrectQuestions, 0, examCorrectQuestions.Length);
                 Array.Clear(examWrongQuestions, 0, examWrongQuestions.Length);
                 Array.Clear(corrIndexes, 0, corrIndexes.Length);
@@ -528,7 +604,7 @@ namespace QuestionannaireApp
             }
             catch (ArgumentOutOfRangeException)
             {
-                MessageBox.Show("Это первый вопрос!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                MessageBox.Show(rm.GetString("firstQuestion"), rm.GetString("attention"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
         }
 
@@ -539,8 +615,15 @@ namespace QuestionannaireApp
             backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
-            moodulName.Text = "Модуль №1";
-            filename = questions1;
+            moodulName.Text = rm.GetString("modul1TS");
+            if (Properties.Settings.Default.culture == "et-EE")
+            {
+                filename = questionsEst[0];
+            }
+            else
+            {
+                filename = questionsRus[0];
+            }
             fileLoad();
             questionsBox.Enabled = true;
             questionsBox.SetSelected(0, true);
@@ -553,8 +636,15 @@ namespace QuestionannaireApp
             backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
-            moodulName.Text = "Модуль №2";
-            filename = questions2;
+            moodulName.Text = rm.GetString("modul2TS");
+            if (Properties.Settings.Default.culture == "et-EE")
+            {
+                filename = questionsEst[1];
+            }
+            else
+            {
+                filename = questionsRus[1];
+            }
             fileLoad();
             questionsBox.Enabled = true;
             questionsBox.SetSelected(0, true);
@@ -567,8 +657,15 @@ namespace QuestionannaireApp
             backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
-            moodulName.Text = "Модуль №3";
-            filename = questions3;
+            moodulName.Text = rm.GetString("modul3TS");
+            if (Properties.Settings.Default.culture == "et-EE")
+            {
+                filename = questionsEst[2];
+            }
+            else
+            {
+                filename = questionsRus[2];
+            }
             fileLoad();
             questionsBox.Enabled = true;
             questionsBox.SetSelected(0, true);
@@ -581,8 +678,15 @@ namespace QuestionannaireApp
             backButton.Enabled = true;
             exam = false;
             questionsBox.Items.Clear();
-            moodulName.Text = "Модуль №4";
-            filename = questions4;
+            moodulName.Text = rm.GetString("modul4TS");
+            if (Properties.Settings.Default.culture == "et-EE")
+            {
+                filename = questionsEst[3];
+            }
+            else
+            {
+                filename = questionsRus[3];
+            }
             fileLoad();
             questionsBox.Enabled = true;
             questionsBox.SetSelected(0, true);
@@ -633,22 +737,50 @@ namespace QuestionannaireApp
                 switch (k)
                 {
                     case 1:
-                        filename = questions1;
+                        if (Properties.Settings.Default.culture == "et-EE")
+                        {
+                            filename = questionsEst[0];
+                        }
+                        else
+                        {
+                            filename = questionsRus[0];
+                        }
                         logfile = File.ReadAllLines(filename);
                         qAmount = logfile.Length / 6;
                         break;
                     case 2:
-                        filename = questions2;
+                        if (Properties.Settings.Default.culture == "et-EE")
+                        {
+                            filename = questionsEst[1];
+                        }
+                        else
+                        {
+                            filename = questionsRus[1];
+                        }
                         logfile = File.ReadAllLines(filename);
                         qAmount = logfile.Length / 6;
                         break;
                     case 3:
-                        filename = questions3;
+                        if (Properties.Settings.Default.culture == "et-EE")
+                        {
+                            filename = questionsEst[2];
+                        }
+                        else
+                        {
+                            filename = questionsRus[2];
+                        }
                         logfile = File.ReadAllLines(filename);
                         qAmount = logfile.Length / 6;
                         break;
                     case 4:
-                        filename = questions4;
+                        if (Properties.Settings.Default.culture == "et-EE")
+                        {
+                            filename = questionsEst[3];
+                        }
+                        else
+                        {
+                            filename = questionsRus[3];
+                        }
                         logfile = File.ReadAllLines(filename);
                         qAmount = logfile.Length / 6;
                         break;
@@ -694,9 +826,9 @@ namespace QuestionannaireApp
 
         private void feedbackButton_Click(object sender, EventArgs e)
         {
-           MessageBox.Show("В случае каких-то ошибок или же вопросов(пожеланий) писать сюда:mrexoduso@gmail.com\nТаллин, 2017", "Contact me", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //Feedback feedback = new Feedback();
-            //feedback.Show();
+         //  MessageBox.Show(rm.GetString("feedback"), rm.GetString("contactMe"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Feedback feedback = new Feedback();
+            feedback.Show();
     
         }
 
@@ -704,7 +836,7 @@ namespace QuestionannaireApp
         {
             culture = "et-EE";
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
-            Properties.Settings.Default.language = culture;
+            Properties.Settings.Default.culture = culture;
             Properties.Settings.Default.Save();
             UpdateUIControls();
         }
@@ -713,7 +845,7 @@ namespace QuestionannaireApp
         {
             culture = "ru-Ru";
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
-            Properties.Settings.Default.language = culture;
+            Properties.Settings.Default.culture = culture;
             Properties.Settings.Default.Save();
             UpdateUIControls();
         }
@@ -722,7 +854,7 @@ namespace QuestionannaireApp
         {
             culture = "en-GB";
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(culture);
-            Properties.Settings.Default.language = culture;
+            Properties.Settings.Default.culture = culture;
             Properties.Settings.Default.Save();
             UpdateUIControls();
         }
@@ -742,6 +874,12 @@ namespace QuestionannaireApp
                 Properties.Settings.Default.Save();
             }
 
+        }
+
+        private void aboutTS_Click(object sender, EventArgs e)
+        {
+            About aboutForm = new About();
+            aboutForm.ShowDialog();
         }
     }
 }

@@ -22,34 +22,26 @@ namespace QuestionannaireApp
         {
 
 
-            //MailAddress from = new MailAddress("exordium@gmail.com", "QuestionnaireApp");
-            //MailAddress to = new MailAddress("mrexoduso@gmail.com", "Pavel Goncharov");
-            //List<MailAddress> cc = new List<MailAddress>();
-            //cc.Add(new MailAddress("olja225588@gmail.com", "Olha Hyrych"));
+            MailAddress from = new MailAddress("noreply@gmail.com", "QuestionnaireApp");
+            MailAddress to = new MailAddress("admin@gmail.com", "Pavel Goncharov");
+            List<MailAddress> cc = new List<MailAddress>();
 
-            //string Text = textBox3.Text;
-            //SmtpClient mailClient = new SmtpClient("smtp.gmail.com",25);
-            //mailClient.EnableSsl = true;
-            //MailMessage msgMail;
-            //msgMail = new MailMessage();
-            //msgMail.From = from ;
-            //msgMail.To.Add(to);
-            //foreach (MailAddress addr in cc)
-            //{
-            //    msgMail.CC.Add(addr);
-            //}
-            ////if (bcc != null)
-            ////{
-            ////    foreach (MailAddress addr in _bcc)
-            ////    {
-            ////        msgMail.Bcc.Add(addr);
-            ////    }
-            ////}
-            //msgMail.Subject = textBox1.Text+", "+textBox2.Text;
-            //msgMail.Body = Text;
-            //msgMail.IsBodyHtml = true;
-            //mailClient.Send(msgMail);
-            //msgMail.Dispose();
+            string Text = textBox3.Text;
+            SmtpClient mailClient = new SmtpClient("mail.privateemail.com ", 465);
+            mailClient.EnableSsl = true;
+            MailMessage msgMail;
+            msgMail = new MailMessage();
+            msgMail.From = from;
+            msgMail.To.Add(to);
+            foreach (MailAddress addr in cc)
+            {
+                msgMail.CC.Add(addr);
+            }
+            msgMail.Subject = textBox1.Text + ", " + textBox2.Text;
+            msgMail.Body = Text;
+            msgMail.IsBodyHtml = true;
+            mailClient.Send(msgMail);
+            msgMail.Dispose();
         }
     }
 }

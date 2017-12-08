@@ -1,0 +1,246 @@
+1. Kuidas võetakse dispetšeritsentralisatsiooniga liinil rong jaama vastu, kui sissesõiduvalgusfoor ei ole avanenud? 
+Vedurijuht kontrollib sissesõiduvalgusfoori tehnilist seisukorda
+Vedurijuht kontrollib rööpaahelate tehnilist seisukorda   
++Rong võetakse jaama vastu rongidispetšeri käsuga, mis antakse vedurijuhile rongiraadioside kaudu
+Vedurijuht sõidab jaamapööranguni ülivalvsusega
+-
+2.Millist vormi kirjaliku sõiduloaga saadetakse rong poolautomaat-blokeeringuga liinil jaamast jaamavahele väljasõidufoori keelava näidu juures? 
++Kirjaliku sõiduloaga vorm LA-52 punkt 1 täitmisega
+Kirjaliku teeloaga valgel blanketil vorm LA-50
+Kirjaliku sõiduloaga vorm LA-54 punkt 1 täitmisega
+Kirjaliku teatisega vorm LA-55
+Kirjalik sõiduluba vorm LA-56
+3.Automaatblokeeringuga liinil, kui läbisõiduvalgusfoor on kustunud, millest vedurijuhil edasisõiduks tuleb juhinduda? 
+Sidetöötaja korraldusest
+Teetöötaja korraldusest
+Rongidispetšeri korraldusest
++Vedurifoori lubavast näidust
+Rongipidurite tegevusest
+4.Millise kiirusega võib sõita manöövritöödel vagunitega ees mööda vaba teed või sõitmisel päästerongiga? 
+3 km/h
+15 km/h
++25 km/h
+40 km/h
+60 km/h
+5.Mis dokument on kirjalik hoiatus valgel blanketil kollase diagonaaltriibuga (vorm LA-61)?   
+Keelab sõidu ajal kasutada alkohooli ja narkootilisi aineid
+Keelab tööle tulla puhkamata
++Antakse rongi vedurijuhile siis, kui vedurimeeskonnalt nõutakse rongi või muu veeremiga sõitmisel kõrgendatud tähelepanu või ülivalvsust              
+Ei luba mittekorras vedurit vastu võtta
+Võimaldab manöövritööl anda ette vaguneid ebagabariitsele kohale
+6.Mille alusel määratakse käiku ja lähetatakse päästetööle päästerong ja abivedur hädaolukorras oleva rongi teenindamiseks? 
+Kodaniku avaldusel
++Juhtveduri juhi (vedurijuhi abi) abi osutamise nõudmise alusel
+Ohukahtluse tekkimisel
+Rongi kaubasaatja nõudmisel
+Valvetöötaja nõudmisel
+7.Millise sõiduloaga saadetakse päästerong ja abivedur dišpetseri käsu alusel suletud jaamavahele?
+Kirjaliku teatisega vorm LA-55
+Kirjaliku sõiduloaga vorm LA-56 valgel blanketil kahe punase diagonaaltriibuga   
++Kirjaliku sõiduloaga valgel blanketil punase diagonaaltriibuga vorm LA-64
+Kirjalik sõiduluba rohelisel blnketil vorm LA-52
+Kirjaliku teeloaga valgel blanketil vorm LA-50
+8.Kuna kasutatakse kirjalikku teeluba valgel blanketil vorm LA-50? 
++Automaatblokeeringu rikke korral
++Poolautomaatblokeeringu rikke korral
+Rongiliikluses signalisatsiooni- ja sidevahendite töö katkemisel       
++Telefoniside kasutamisel rongiliikluse korraldamise vahendina
++Päästerongi ja abiveduri liiklemisel
+9.Kus kasutatakse võtisaua? 
++Automaatblokeeringuga liinil töörongi jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
++Poolautomaatblokeeringuga liinil töörongi jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
++Automaatblokeeringuga liinil tõukeveduri jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
++Poolautomaatblokeeringuga liinil tõukeveduri jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
+Veduri automaatsignalisatsiooni veduriseadmete lukustamiseks
+10.Kus kasutatakse liikluse korraldamiseks kirjalikku sõiduluba sinakasrohelisel blanketil vorm LA-54?
+Poolautomaablokksüsteemiga liinidel
+Rongiliikluses telefonsidega    
++Automaatblokksüsteemiga liinidel
+Töörongide saatmisel jaamavahele
+Kõigi sidevahendite katkemisel
+11.Tegevus1. ohuklassi kuuluva veose või veeremi süttimisel rongis. 
+Sõitma rongiga edasi naaberjaama
++Viivitamata alustama tulekustutamist
+Valvama rongi
++Peatama rongi kohal, et võimaliku õnnetuse tagajärjed oleksid minimaalsed
++Teatama juhtumist dispetšerile ja jaamakorraldajale
+12.Millise kiirusega peab vedurijuht juhtima rongi jaama sissesõidul sissesõidufoori keelava näidu või kustunud põhitulede korral kutsesignaaliga, jaamakorraldaja käsuga või selleks juhtumiks ette nähtud eriloaga vastuvõtmisel. 
+Kuni 5 km/h
+Kuni 15 km/h
++Kuni 20 km/h
+Kuni 40 km/h
+Piirkiirusega
+13. Mida lubab kirjalik sõiduluba valgel blanketil punase diagonaaltriibuga vorm LA-64? 
++Lubab sõita rongiliikluseks suletud jaamavahele päästetöödeks  
++Lubab sõita mööda keelava näiduga väljasõidufoorist
+Lubab sõita kõigi signaalisatsiooni- ja sidevahendite tegevuse katkemisel
+Lubab sõita automaatblokeeringu rikkel
+Lubab sõita poolautomaatblokeeringu rikkel
+14.Kui tee- ja vedurifoori näidud sõiduhetkel erinevad, millest juhindub vedurijuht? 
+Dišpetseri korraldusest                     
+Jaamakorraldaja korraldusest            
++Teefoori näidust                                
+Turvangutöötaja korraldusest            
+Teetöötaja korraldusest                     
+15.Kellele infrastruktuuri rikke avastanud vedurijuht on kohustatud teatama ? 
++Taga sõitvate rongide vedurijuhtidele  
++Lähima jaama korraldajale 
++Dišpetserile
+Päästerongi korraldajale
+Kohalikule politseile
+16.Mille alusel määratakse käiku ning lähetakse päästetööle päästerong ja abivedur? 
+Kodaniku poolt suitsupilve nägemisel
+Kodaniku poolt tulekahju nägemisel     
++Hädaolukorras oleva juhtveduri juhi (vedurijuhi abi) abi osutamise nõude alusel   
+Kodaniku poolt üleujutuse nägemisel
+Arvamusel, et vajatakse abi
+17.Mllise sõiduloaga saadetakse rong jaamavahele kõigi kehtestatud signalisatsiooni ja sidevahendite tegevuse katkemisel? 
++Kirjalik sõiduluba vorm LA-56 valgel blanketil kahe punase diagonaaltriibuga
+Kirjaliku teatisega vorm LA-55
+Kirjalik teeluba valgel blanketil vorm LA-50
+Kirjalik sõiduluba rohelisel blanketil vorm LA-52
+Kirjalik sõiduluba sinakasrohelisel blanketil vorm LA-54
+18.Milllise kiirusega peab vedurijuht sõitma mööda vastusuunalist rada vedurifoori rohelise näidu järgi ? 
+Mitte üle 15 km/h
+Mitte üle 25 km/ h
+Mitte üle 40 km/h
+Mitte üle 60 km/h
++Raudtee-ettevõtja poolt kehtestatud piirkiirusega
+19.Millise sõiduloaga automaatblokeeringu rikke korral saadetakse rong vastassuunalisele jaamavahele? 
+Kirjalik sõiduluba sinakasrohelisel blanketil vorm LA-54
+Kirjalik sõiduluba valgel blanketil punase diagonaaltriibuga vorm LA-64
+Kirjalik sõiduluba vorm LA-56 valgel blanketil kahe punase diagonaaltriibuga     
++Kirjalik teeluba valgel blanketil vorm LA-50
+Kirjalik sõiduluba rohelisel blanketil vorm LA-52
+20.Milline on vedurijuhi tegevus kollase-punase tule põlemisel sõidul vedurifoori näidu järgi sõidul mööda vastassuunalist rada? 
++Sõitma kiirusega kuni 20 km/h ja peatama rongi esimese vastassuunalise teefoori ees
+Sõitma piirkiirusega 
+Sõitma kiirusega kuni 50 km/h 
+Sõitma kiirusega kuni 40 km/h 
+Vähendada sõidukiirust, mis tagab rongi peatumise liiklustakistuse ilmnemisel
+21.Mida lubab automaatblokeeringuga liinil kirjalik sõiduluba sinakasrohelisel blanketil vorm LA-54? 
+Lubab rongil/tõukeveduril nr … väljuda teelt nr… ja sõita läbi… tee ning edaspidi mööda jaamavahet/kuni… jaama sissesõidufoorini/kuni … kilomeetrini ja sealt tagasi.
++Lubab rongil nr… väljuda jaamavahele teelt nr… ja sõita läbi tee nr… möödudes keelava näiduga /matkafoorist/väljasõidufoorist/ kiirusega mitte üle 20 km/h, ülivalvsusega, valmisolekuga viivitamatuks peatumiseks, kui tekib oht liiklusele. Käesolev kirjalik sõiduluba annab õiguse sõita kuni/väljasõidufoorini/esimese läbisõidufoorini/ ja edaspidi automaatblokeeringu signaalide järgi.
++Lubab rongil nr… väljuda jaamavahele teelt nr… ja sõita läbi tee nr… lubava näiduga /grupiväljasõidufoori/matkafoori/ järgi, millel ei põle /matkanäidik/suunanäidik/, ja edaspidi automaatblokeeringu signaalide järgi.
+Lubab rongil nr..veduriga… väljuda…/jaama/posti/teelt nr… ja sõita läbi tee nr jaamavahele, möödudes keelava näiduga /matkafoorist/ väljasõidufoorist/ülivalvsusega, ja sõita jaamavahel kuni… kilomeetrini
+Lubab rongil nr… väljuda…. /jaama/posti/teelt nr… ja sõita läbi tee nr… jaamavahele, möödudes keelava näiduga /matkafoorist/väljasõidufoorist/ ülivalvsusega ja sõita kuni…/jaama/posti/sissesõidufoorini.
+22.Kui suure kiirusega lubatakse vedurijuhil, kes sõidab seisva rongiga kokku haakima, siseneda hõivatud blokkpiirkonda rongi peatamata? 
+Mitte üle 5 km/h
+Mitte üle 15 km/h
++Mitte üle 20 km/h
+Mitte üle 40 km/h
+Mitte üle 60 km/h
+23.Mida lubab poolautomaatblokeeringuga liinil kirjalik sõiduluba rohelisel blanketil vorm LA-52 ? 
++Luban rongil nr … väljuda jaamavahele teelt nr … ja sõita läbi tee nr … möödudes keelava näiduga /väljasõidufoorist/ matkafoorist/ ülivalvsusega, ja sõita jaamavahel kuni … /jaama/posti/ sissesõidufoorini;
++Luban rongil nr … väljuda jaamavahele teelt nr … lubava näiduga/grupiväljasõidufoori/grupimatkafoori/ järgi, millel ei põle matkanäidik
+Lubab rongil/tõukeveduril nr … väljuda teelt nr … ja sõita läbi … tee ning edaspidi mööda jaamavahet /kuni… jaama sissesõidufoorini/ kuni … kilomeetrini ja tagasi,
+Lubab rongil nr..veduriga… väljuda…/jaama/posti/teelt nr… ja sõita läbi tee nr jaamavahele, möödudes keelava näiduga /matkafoorist/ väljasõidufoorist/ülivalvsusega, ja sõita jaamavahel kuni… kilomeetrini
+Lubab rongil nr… väljuda…. /jaama/posti/teelt nr… ja sõita läbi tee nr…jaamavahele, möödudes keelava näiduga /matkafoorist /väljasõidufoorist/ülivalvsusega ja sõita kuni…/jaama/posti/ sissesõidufoorini.
+24.Rongi lahtihaakumisel jaamavahel ja järgneval tagurdamisel rongi ühendamiseks, vedurijuht peab jälgima missugust manöövrikiirust vagunite kokkuhaakumise hetkel? 
++Ei ületa 3 km/h
+Ei ületa 5 km/h
+EI ületa 10 km/h
+Ei ületa 15 km/h
+Ei ületa 25 km/h
+25.Kus kasutatakse kirjalikku sõiduluba vorm LA-56 valgel blanketil kahe punase diagonaaltriibuga? 
+Lubab rongil nr … väljuda jaamavahele teelt nr … ja sõita läbi tee nr … möödudes keelava näiduga /väljasõidufoorist/ matkafoorist/ülivalvsusega, ja sõita jaamavahel kuni … /jaama/posti/ sissesõidufoorini. Kehtib poolautomaat blokeeringuga liinil.
+Lubab rongil nr … väljuda jaamavahele teelt nr … lubava näiduga /grupiväljasõidufoori/grupimatkafoori/ järgi, millel ei põle matkanäidik. Kehtib poolautomaatblokeeringuga liinil.
+Lubab rongil/tõukeveduril nr … väljuda teelt nr … ja sõita läbi … tee ning edaspidi mööda jaamavahet /kuni… jaama sissesõidufoorini/ kuni … kilomeetrini ja tagasi. Blokeering ei tööta.
+Lubab rongil nr..veduriga… väljuda…/jaama/posti/teelt nr… ja sõita läbi tee nr jaamavahele, möödudes keelava näiduga /matkafoorist/väljasõidufoorist/ ülivalvsusega, ja sõita jaamavahel kuni… kilomeetrini. Sõitmiseks suletud jaamavahele.
++Lubab rongil nr… väljuda…. /jaama/posti/teelt nr… ja sõita läbi tee nr… jaamavahele, möödudes keelava näiduga /matkafoorist /väljasõidufoorist/ ülivalvsusega ja sõita kuni…/jaama/posti/ sissesõidufoorini. Kõigi side- ja signalisatsioonivahendite töö on katkenud.
+26.Mida peab jaamavahele seismajäänud rongi vedurijuht või tema abi teatama abistamisnõudes? 
+Rongi pea asukoha asulas
+Rongi pea asukoha kilomeetri numbri  
++Rongi pea asukoha kilomeetri ja piketi numbri
++Abistamisnõude saatmise kellaaja
+Ilmaandmed
+27.Mida lubab kirjalik sõiduluba valgel blanketil punase diagonaaltriibuga vorm LA-64? 
+Lubab rongil nr … väljuda jaamavahele teelt nr … ja sõita läbi tee nr … möödudes keelava näiduga /väljasõidufoorist/ matkafoorist/ ülivalvsusega, ja sõita jaamavahel kuni … /jaama/posti/ sissesõidufoorini, kehtib poolautomaatblokeeringuga liinil.
+Lubab rongil nr … väljuda jaamavahele teelt nr … lubava näiduga /grupiväljasõidufoori/grupimatkafoori/ järgi, millel ei põle matkanäidik . Kehtib poolautomaatblokeeringuga liinil.
+Lubab rongil/tõukeveduril nr … väljuda teelt nr … ja sõita läbi … tee ning edaspidi mööda jaamavahet /kuni… jaama sissesõidufoorini/ kuni … kilomeetrini ja tagasi. Blokeering ei tööta.
++Lubab rongil nr…veduriga… väljuda…/jaama/posti/teelt nr… ja sõita läbi tee nr….. jaamavahele, möödudes keelava näiduga /matkafoorist/ väljasõidufoorist/ülivalvsusega, ja sõita kuni… kilomeetrini. Sõitmiseks suletud jaamavahele.
+Lubab rongil nr… väljuda…. /jaama/posti/teelt nr… ja sõita läbi tee nr… jaamavahele, möödudes keelava näiduga /matkafoorist /väljasõidufoorist/ ülivalvsusega ja sõita kuni…/jaama/posti/ sissesõidufoorini. Kõigi side- ja signalisatsioonivahendite töö on katkenud.
+28. Kuna lisatakse rongi numbrile iseloomustav indeks (R, P, V, O jne)?
++Kui rong on üle kehtestatud kaalunormi     
++Kui rong on üle kehtestatud pikkusnormi  
++Kui rong on koostatud laaditud tsistervagunitest
++Rongis on lõhkeainega ehk 1. ohuklassi kuuluva veosega vagun
++Rongis on vagun ebagabariitse kaubaga
+29.Kuidas toimub automaatblokeeringuga jaamavahelt tõukeveduri pöördumine jaamavahelt tagasi? 
+Dispetšeri käsuga
+Jaamakorraldaja korraldusega
+Erilise valvsusega valmisolekuga peatumiseks
++Saatejaama juhtimispuldist väljavõetud võtisauaga     
++Kirjaliku teeloaga valgel blanketil vorm LA-50
+30.Milliste defektidega pidurkinga ei tohi kasutada?
++Purunenud tugipakk, puudub tugipaku plaat;
++Murdunud, purunenud, kõverdunud või laiaks vajutatud tallanina;
++Tallakinnituse ja tugipaku kinnituse nõrgenemine, käepideme kõverdumine, murdumine või puudumine;
+Pidurking on kaalult raske 
++Jäätunud või õline tallarenn või tallarenn ei vasta rööpapea laiusele
+31.Kuidas lähetatakse liinile mittetöötav vedur?
+Pannakse rongi nagu harilik vagun
+Lähetatakse liinile ainult eraldi veduriga  
++Veeremi valdaja avalduse põhjal pärast selle tehnilise seisundi kontrollimist, mis vormistatakse aktiga  
++Aktis peab olema näidatud veduri sõidukiirus      
++Mittetöötav vedur pannakse kaubarongis vedava veduri järele
+32.Kuidas poolautomaatblokeeringuga liinil saadetakse rong jaamavahele, kui rong oli kinnipeetud või teise samasuunalise rongi saatmisel pärast väljasõidu foori sulgumist? 
+Kirjalik sõiduluba vorm LA-54 punkti II täitmisega 
+Kirjalik sõiduluba vorm LA-54 punkti I täitmisega
++Kirjalik sõiduluba vorm LA-52 punkti I täitmisega
+Kirjalik sõiduluba vorm LA-52 punkti II täitmisega
+-
+33.Mitu kilomeetrit enne kirjalikul sõiduloal märgitud kohta peab päästerongi või abiveduri juht vähendama jaamavahel kiirust? 
+1 km
++2 km
+3 km
+4 km
+5 km
+34.Kui palju tuleb arvestuslikule kinnitusnormile lisaks panna pidurkingi tugeva tuule korral (kiirus üle 15m/s), mille suund ühtib vagunite võimaliku iseenesest veerema hakkamise suunaga? 
+1 pidurking     
++2 pidurkinga  
+3 pidurkinga  
+4 pidurkinga
+5 pidurkinga 
+35.Kuidas saadetakse rong jaamavahele olukorras, kus poolautomaatblokeering ei tööta? 
+Kirjalik sõiduluba vorm LA-54 punkti II täitmisega
+Kirjalik sõiduluba vorm LA-54 punkti I täitmisega
+Kirjalik sõiduluba vorm LA-52 punkti I täitmisega
+Kirjalik sõiduluba vorm LA-52 punkti II täitmisega
++Teeluba vorm LA-50
+36.Kui jaamas tuleb peatuda, kus vedurijuht on kohustatud peatama rongi? 
+Jaama pöörangutel
+Jaama reisiplatvormi juures  
++Enne väljasõidu valgusfoori 
++Väljasõidu valgusfoori puudusel enne piirdetulpa       
+Jaamakorraldaja ruumi juures 
+37.Kuidas saadetakse poolautomaatblokeeringuga liinil töörong jaamavahele, kui töörong pärast tööd pöördub saatejaama tagasi? 
+Teeloaga vorm LA-50
+Kirjalik sõiduluba vorm LA-52 punkti I täitmisega
+Kirjalik sõiduluba vorm LA-52 punkti II täitmiseg
++Võtisauaga
+Kirjaliku sõiduloaga vorm LA-54 punkti I täitmisega
+38.Mida on kohustatud tegema jaamavahel rikke avastanud vedurijuht (mootorrongi juht)? 
++Vähendama sõidukiirust
++Vajadusel peatama rongi
++Teatama rikkest rongiraadioside kaudu rongi taga sõitvate rongide vedurijuhtidele       
++Teatama rikkest lähima jaama korraldajale ja dispetšerile
+Teatama politseisse
+39.Kuidas saadetakse rong automaatblokeeringuga jaamavahele teelt, millel puudub väljasõidufoor? 
+Vedurijuhile raadio teel antud jaamakorraldaja käsk      
++Kirjalik sõiduluba vorm LA-54 punkti I täitmisega
+Teeluba vorm LA-50
+Kirjalik sõiduluba vorm LA-52 punkti I täitmisega
+Kirjalik sõiduluba vorm LA-54 punkti II täitmisega
+40.Milline iseloomustav indeks lisatakse rongi numbrile, kui rongis on lõhkeainega ehk 1. ohuklassi kuuluva veosega vagun? 
+R
+P
+V
++O
+2001E - 0238
+41.Kuidas teatatakse vedurijuhile, et rongikoosseisus on 1. ohuklassi kuuluva veosega laaditud vagun ? 
+Rongidišpetseri käsuga
+Jaamakorraldaja käsuga 
++Kirjaliku hoiatusega
+Kaubasaaturi teatega
+Päästeteenistuse teatega

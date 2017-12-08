@@ -117,11 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutTS" xml:space="preserve">
+    <value>Programmist</value>
+  </data>
+  <data name="activation" xml:space="preserve">
+    <value>Aktiveerimine</value>
+  </data>
+  <data name="activationExpired" xml:space="preserve">
+    <value>Teie aktiveerimine on aegunud! Võtke ühendust administraatoriga, kui see on viga. admin@exordium.cloud</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>ja</value>
+  </data>
+  <data name="answer" xml:space="preserve">
+    <value>vastus</value>
+  </data>
+  <data name="answers" xml:space="preserve">
+    <value>vastused</value>
+  </data>
+  <data name="attention" xml:space="preserve">
+    <value>Tähelepanu!</value>
+  </data>
   <data name="backButton" xml:space="preserve">
     <value>Tagasi</value>
   </data>
+  <data name="cancelButton" xml:space="preserve">
+    <value>Tühistuma</value>
+  </data>
+  <data name="cantEstablish" xml:space="preserve">
+    <value>Praegu ei saa me luua ühendust teie ja meie serveriga. Proovige hiljem uuesti</value>
+  </data>
+  <data name="contactMe" xml:space="preserve">
+    <value>Võta minuga ühendust</value>
+  </data>
+  <data name="correct" xml:space="preserve">
+    <value>õige</value>
+  </data>
   <data name="examTS" xml:space="preserve">
     <value>Eksam</value>
+  </data>
+  <data name="feedback" xml:space="preserve">
+    <value>text</value>
   </data>
   <data name="feedbackButton" xml:space="preserve">
     <value>Tagasiside</value>
@@ -129,11 +165,29 @@
   <data name="finishButton" xml:space="preserve">
     <value>Lõpetama</value>
   </data>
+  <data name="finishButton1" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="firstQuestion" xml:space="preserve">
+    <value>See on esimene küsimus!</value>
+  </data>
   <data name="fontTS" xml:space="preserve">
     <value>Font</value>
   </data>
+  <data name="from" xml:space="preserve">
+    <value>Alates</value>
+  </data>
+  <data name="incompleteKey" xml:space="preserve">
+    <value>Teie võti on puudulik!</value>
+  </data>
+  <data name="incorrect" xml:space="preserve">
+    <value>ebaõige</value>
+  </data>
   <data name="languageTS" xml:space="preserve">
     <value>Keel</value>
+  </data>
+  <data name="lastQuestion" xml:space="preserve">
+    <value>See on viimane küsimus!</value>
   </data>
   <data name="modul1TS" xml:space="preserve">
     <value>Moodul 1</value>
@@ -153,17 +207,32 @@
   <data name="moodulTS" xml:space="preserve">
     <value>Moodul</value>
   </data>
+  <data name="newVersion" xml:space="preserve">
+    <value>Uus versioon!</value>
+  </data>
+  <data name="newVersionAvailable" xml:space="preserve">
+    <value>Uus versioon on saadaval. Kas soovite alla laadida?</value>
+  </data>
   <data name="nextButton" xml:space="preserve">
     <value>Järgmine</value>
   </data>
   <data name="randomCheckBox" xml:space="preserve">
     <value>Juhuslik</value>
   </data>
+  <data name="registerButton" xml:space="preserve">
+    <value>Registreerige litsents</value>
+  </data>
+  <data name="serverUnreachable" xml:space="preserve">
+    <value>Server ei ole praegusel hetkel saavutatav. Proovige hiljem uuesti.</value>
+  </data>
   <data name="settingsTS" xml:space="preserve">
     <value>Seadmed</value>
   </data>
   <data name="startup" xml:space="preserve">
     <value>Käivitamise programm</value>
+  </data>
+  <data name="testResult" xml:space="preserve">
+    <value>Testi tulemused</value>
   </data>
   <data name="verifyButton" xml:space="preserve">
     <value>Kontrollima</value>

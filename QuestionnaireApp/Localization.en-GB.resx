@@ -117,11 +117,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutTS" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="activation" xml:space="preserve">
+    <value>Activation</value>
+  </data>
+  <data name="activationExpired" xml:space="preserve">
+    <value>Your activation has expired! Contact administrator by email if it is a mistake. admin@exordium.cloud</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>and</value>
+  </data>
+  <data name="answerPlural" xml:space="preserve">
+    <value>answers</value>
+  </data>
+  <data name="answerSingle" xml:space="preserve">
+    <value>answer</value>
+  </data>
+  <data name="attention" xml:space="preserve">
+    <value>Attention</value>
+  </data>
   <data name="backButton" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="cancelButton" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="cantEstablish" xml:space="preserve">
+    <value>Right now we are unable to establish connection between you and our server. Try again later</value>
+  </data>
+  <data name="contactMe" xml:space="preserve">
+    <value>Contact Me</value>
+  </data>
+  <data name="correct" xml:space="preserve">
+    <value>correct</value>
+  </data>
   <data name="examTS" xml:space="preserve">
     <value>Exam</value>
+  </data>
+  <data name="feedback" xml:space="preserve">
+    <value>text</value>
   </data>
   <data name="feedbackButton" xml:space="preserve">
     <value>Feedback</value>
@@ -129,11 +165,29 @@
   <data name="finishButton" xml:space="preserve">
     <value>Finish</value>
   </data>
+  <data name="finishButton1" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="firstQuestion" xml:space="preserve">
+    <value>This is the very first question!</value>
+  </data>
   <data name="fontTS" xml:space="preserve">
     <value>Font</value>
   </data>
+  <data name="from" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="incompleteKey" xml:space="preserve">
+    <value>Your key is incomplete!</value>
+  </data>
+  <data name="incorrect" xml:space="preserve">
+    <value>incorrect</value>
+  </data>
   <data name="languageTS" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="lastQuestion" xml:space="preserve">
+    <value>This is the very last question!</value>
   </data>
   <data name="modul1TS" xml:space="preserve">
     <value>Modul 1</value>
@@ -153,17 +207,32 @@
   <data name="moodulTS" xml:space="preserve">
     <value>Moodul</value>
   </data>
+  <data name="newVersion" xml:space="preserve">
+    <value>New Version!</value>
+  </data>
+  <data name="newVersionAvailable" xml:space="preserve">
+    <value>New version is available. Would you like to download?</value>
+  </data>
   <data name="nextButton" xml:space="preserve">
     <value>Next</value>
   </data>
   <data name="randomCheckBox" xml:space="preserve">
     <value>Random</value>
   </data>
+  <data name="registerButton" xml:space="preserve">
+    <value>Register the license</value>
+  </data>
+  <data name="serverUnreachable" xml:space="preserve">
+    <value>Server is unreachable at this moment. Try again later.</value>
+  </data>
   <data name="settingsTS" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="startup" xml:space="preserve">
     <value>Preparing application...</value>
+  </data>
+  <data name="testResult" xml:space="preserve">
+    <value>Test results</value>
   </data>
   <data name="verifyButton" xml:space="preserve">
     <value>Verify</value>

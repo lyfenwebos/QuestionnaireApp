@@ -1,0 +1,198 @@
+1. Mida lubab jaama sissesõidu valgusfooriga edastatav üks kollane tuli?
+Lubab sõita jaama kõrvalteele vähendatud kiirusega 
+Lubab sõita jaama peateele kehtestatud piirkiirusega
++Lubab sõita jaama peateele valmisolekuga peatuseks
+Keelab signaalist möödasõidu 
+Lubab läbi sõita järgmisest keelava näiduga foorist 
+2. Mida tähendab vedurifooris valge tuli automaatblokeeringuga liinil?
+Tuleb peatada rong
+Tuleb sõita kiirusega 15 km/h
++Tuleb juhinduda teefoori näitudest
+Tuleb kontrollida, et rong ei ole katkenud 
+Tuleb kontrollida, et veduri prožektor on sisse lülitatud 
+3. Millised manöövrifoori signaalid lubavad teostada manöövreid? 
++Ühe valge tulega
+Ühe sinise tulega 
+Ühe kollase vilkuva tulega
+Ühe rohelise vilkuva tulega,
+Ühe punase tulega 
+4. Mis on tinglubav signaal? 
+Kilp, mis lubab läbi sõita kinnise näiduga sissesõidusignaalist
+Kilp, mis lubab läbi sõita kinnise näiduga väljasõidusignaalist
++Kilp, mis lubab kaubarongil erandkorras sõita mööda punase tulega läbisõidufoorist
+Kilp, mis näitab depoo asukohta
+Kilp, mis lubab sõita kiiremini määratud piirkiirusest
+5. Mida tähendab sissesõiduvalgusfooris kaks kollast tuld, nendest ülemine vilkuv? 
+Lubab sõita jaama kehtestatud piirkiirusega mööda peateed, järgmine foor on avatud
+Lubab rongil sõita jaama peateele valmisolekuga peatumiseks, järgmine foor on suletud
++Lubab rongil vähendatud kiirusega sõita jaama kõrvalteele, järgmine foor on avatud
+Lubab rongil vähendatud kiirusega sõita jaama kõrvalteele, valmisolekuga peatumiseks, järgmine foor on suletud
+Lubab rongil vähendatud kiirusega läbi sõita järgmisest punase tulega foorist
+6. Millise näiduga võib jätkata sõitu foori punase või kustunud tule juures kui rongi võetakse jaama kutsesignaaliga?
+Ühe vilkuva kollase tulega
+Ühe vilkuva punase tulega
++Ühe valge vilkuva tulega
+Ühe sinise vilkuva tulega
+Kahe kollase tulega, neist ülemine vilkuv
+7. Millise kiirusega lubab kutsesignaali lubav näit jätkata sõitu foori punase või kustunud tule juures kuni järgmise foorini või piirdetulbani? 
+Kuni 5 km/h
+Kuni 15 km/h
++Kuni 20 km/h
+Kuni 40 km/h
+Lubatud piirkiirusega
+8. Milleks kasutatakse tõkkefoori? 
+Saaturi juhendmisel läbisõidetava teelõigu piiramiseks
+Raudtee ja trammitee ühetasandilise ristumiskoha piiramiseks
+Rongi jaamast väljumise keelamiseks
+Rongi jaamavahelt jaama sissesõitmise keelamiseks
++Raudteeülesõidukohal või raudteerajatisel liikuva rongi või muu veeremi peatamiseks ootamatult tekkinud ohu korral
+9. Millal tohib automaatblokeeringuga liinil kustunud tulega läbisõidufoorist peatumata mööda sõita? 
+Sidetöötaja korraldusel
+Teetöötaja korraldusel
+Dispetšeri suulisel korraldusel
++Kui vedurifooris on lubav näit
+Jaamakorraldaja suulisel korraldusel
+10. Kus kasutatakse piirdetulpe? 
+Jaama keskpunkti märkimiseks    
+Pöörmeposti asukoha märkimiseks
++Pannakse teedevahele kohta, mis tagab ohutu sõidu ühinevatel teedel
+Jaama piiri märkimiseks
+Sõidudokumentide üleandmise koha märkimiseks
+11. Kuna kasutatakse signaalmärki piirkiiruse muutumine? 
+Veduridepoos ekipeerimisteedel
+Rongi ette sõitmisel
+Rongi eest ärasõitmisel
++Peateel sõidukiiruse muutumise kohta
+Veduri sõidukiiruse vähenemisel
+12. Kuidas tähistatakse rongi pea üherajalisel liinil ja kaherajalise liini pärisuunalisel rajal ööpäevaringselt ? 
+Ühe kollase tulega
+Prožektori valge tulega
++Kahe esilaterna ja prožektori valge tulega
+Vasaku esilaterna vasak tuli punane, parem valge
+Ei tähistata
+13. Kuidas ööpäevaringselt tähistatakse kaubarongi saba? 
++Valgust peegeldava punase signaalkettaga
+Signaallaterna kolme punase tulega
+Signaallaterna punase tulega
+Signaallaterna valge tulega
+Signaallaterna kahe punase tulega
+14. Millal tähistatakse ööpäevaringselt vedurit esilaterna kahe kollase tulega? 
+Kui sõidab jaamavahele päästerongi
+Kui sõidab jaamavahele töörongiga
++Kui veduriga peas sõidab lumesahk
+Rongi sõidul ohtliku kaubaga
+Rongi sõidul tormitingimustes
+15. Mida signaliseerib päeval ja öösel ruudukujuline kollane kilp? 
++Jaamavahel lubab sõita kiirust vähendades, ees on ohtlik koht
++Jaama peateel lubab sõita kiirust vähendades, ees on ohtlik koht
++Jaama muudel teedel lubab sõita kirjalikus hoiatuses märgitud kiirusega, selle puudusel kuni 25 km/h
+Jaama muudel teedel lubab sõita kirjalikus hoiatuses märgitud kiirusega, selle puudusel kuni 15 km/h
+Jaama muudel teedel lubab sõita kirjalikus hoiatuses märgitud kiirusega, selle puudusel kuni 40 km/h
+16. Mida tähendab kolm lühikest helisignaal? 
+Piduriproovi tegemisel
+Rongi tõukamise alustamisel
+Jaama saabumise osa rongiga             
++Keelab sõita ja nõuab liikluse peatamist
+Tulekahju korral                                                
+17. Mis helisignaal antakse ühe pika ja kahe lühikese ( _ . .) heliga (gruppidena)? 
+Üldhäiresignaal                       
+Valvsussignaal                       
++Tulekahjuhäiresignaal
+Tähelepanusignaal                  
+Keelab sõita                              
+18. Milliseid helisignaale antakse automaatpidurite piduriproovil vedurijuhi poolt? 
+Teha piduriproov- vastab vedurivile kolme lühikese heliga
+Teha piduriproov- vastab vedurivile kahe lühikese heliga
++Teha piduriproov . vastab vedurivile ühe lühikese heliga
+Pidurid lahti lasta – vastab vedurivile kahe pika heliga
++Pidurid lahti lasta – vastab vedurivile kahe lühikese heliga
+19. Mida tähendab valge tuli vedurifooris? 
++Veduriautomaatsignalisatsiooni seade on sisse lülitatud
+Veduriautomaatsignalisatsiooni seade on rikkis
++Veduriautomaatsignalisatsiooni seade ei võta vastu teefoori signaale
+Lubab sõita vähendatud kiirusega
+Nõuab peatumist
+20. Kuidas signaliseerivad matkanäidikud liikumissuuna ja vastuvõtutee näitamiseks? 
+Roheliste tuledega numbrid, tähed, signaalribad teefooril
++Valgete tuledega numbrid, tähed, signaalribad teefooril
+Kollaste tuledega numbrid, tähed, signaalribad teefooril
+Siniste tuledega numbrid, tähed, signaalribad teefooril
+Punaste tuledega numbrid, tähed, signaalribad teefooril
+21. Kuidas signaliseerivad matkanäidikud tee numbri näitamiseks grupiväljasõidufoori või matkafoori lubava signaali korral? 
++Roheliste tuledega matkanäidik
+Valgete tuledega matkanäidik
+Kollaste tuledega matkanäidik
+Siniste tuledega matkanäidik
+Punate tuledega matkanäidik
+22. Milline on helisignaal üldhäiresignaal? 
+Kolm lühikest helisignaali gruppidena
+Kaks pikka helisignaali gruppidena
+Kolm pikka ja üks lühike helisignaali gruppidena
++Üks pikk ja kolm lühikest heli gruppidena
+Üks pikk ja kaks lühikest heli gruppidena
+23. Kuidas tähistatakse automaatblokeeringuga liinil läbisõidufoorid? 
+Paaritu liiklemissuuna foore tähistatakse tähega L
+Paaritu liiklemissuuna foore tähistatakse paarisnumbritega
++Paaritu liiklemissuuna foore tähistatakse paaritute numbritega
+Paaris liiklemissuuna foore tähistatakse paaritute numbritega
++Paaris liiklemissuuna foore tähistatakse paarisnumbritega 
+24. Mida nimetatakse piiramissignaalideks? 
++Ajutisi teisaldatavaid signaale, signaallippe 
+Rongisignaale                                                    
+Helisignaale                                                       
+Käsisignaale                                                       
+Pöörmenäidikut                                                  
+25. Milliste näitudega edastatakse automaatblokeeringuga liinil väljasõidufoori signaale? 
++Üks roheline tuli                                                   
++Üks kollane tuli                                                     
++Kaks kollast tuld, nendest ülemine vilkuv 
++Kaks kollast tuld                                                    
++Üks punane tuli                                                     
+26. Kuidas tähistatakse lumesahk? 
+Kui rongi peas on lumesahk, ööpäevaringselt kahe esilaterna ja prožektori valge tulega
++Kui rongi peas on lumesahk, päeval kahe kollase lipuga lumesaha kere küljekonksudel ja öösel kahe kollase tulega külglaternates
++Kui rongi peas on lumesahk, on vedurilt näha kaks valget kontrolltuld
+Kui rongi peas on vedur, ööpäevaringselt kahe esilaterna ja prožektori valge tulega
+Kui rongi peas on vedur, ööpäevaringselt veduri esilaterna kahe kollase tulega
+27. Kuna antakse veduri või mootorrongi vilega perioodiliselt valvsussignaali üks lühike ja üks pikk helin? 
++Rongi lähenemisel tinglubavale signaalile ja edasisel liikumisel selle signaali järgi
+Rongi möödumisel kaherajalisel teel rongist
++Rongi vastuvõtmisel jaama kutsesignaaliga ja kõikidel muudel juhtudel keelava signaalnäiduga või rongi vastuvõtmisel kustunud sissesõidufoori põhitulega
++Rongi möödumisel punase tulega, arusaamatu näiduga või kustunud läbisõidufoorist pärast nende ees seismist ja edasisel liikumisel
++Vastusuunalisel rajal sõitva rongi vastuvõtmisel jaama.
+28. Kuidas automaatblokeeringuta liinil edastatakse sissesõidu- ja kattefoori juurde kuuluva hoiatusfooriga signaale? 
++Üks roheline tuli
++Üks kollane tuli
++Üks kollane vilkuv tuli
+Üks sinine tuli
+Üks valge tuli
+29. Milline on veduri (mootorrongi) või dresiini juhi poolt antav helisignaal – tähelepanusignaal? 
+Kolm lühikest heli
+Kaks pikka heli
++Üks pikk heli
+Kolm pikka heli
+Üks lühike ja üks pikk heli     
+30. Millist signaali näitu kasutatakse kutsesignaalina sissesõidu-, matka-, ja väljasõidufooris? 
+Üks kollane vilkuv tuli
+Üks roheline vilkuv tuli
+Üks valge tuli
++Üks valge vilkuv tuli
+Üks sinine tuli
+31. Milliseid signaale edastatakse tõkkefooridega ? 
+Üks roheline tuli
+Üks kollane tuli
+Üks sinine tuli
+Üks valge tuli
++Üks punane tuli
+32. Milliseid signaale edastatakse automaatblokeeringuga liinil läbisõidufooriga ? 
+Kaks kollast tuld
++Üks roheline tuli
++Üks kollane tuli
++Üks punane tuli
+Kaks kollast tuld, neist ülemine vilkuv
+33. Millise kiirusega lubab kutsesignaali üks valge vilkuv tuli jätkata sõitu ? 
+Kuni 5 km/h
+Kuni 15 km/h
++Kuni 20 km/h
+Kuni 40 km/h
+Kuni 60 km/h

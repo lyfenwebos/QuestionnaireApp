@@ -14,6 +14,7 @@ namespace QuestionannaireApp
 {
     public class UpdateManager
     {
+        System.Resources.ResourceManager rm = null;
         public string address = "http://46.101.148.248/";
         public static string GetWebPage(string URL)
         {
@@ -46,13 +47,15 @@ namespace QuestionannaireApp
         }
         public bool CheckUpdate()
         {
+            rm = new System.Resources.ResourceManager("QuestionannaireApp.Localization", Assembly.GetExecutingAssembly());
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Properties.Settings.Default.culture);
             XmlDocument VersionInfo = new XmlDocument();
             VersionInfo.LoadXml(GetWebPage(address+"update/update.xml"));
 
             if (VersionInfo.SelectSingleNode("//latestversion").InnerText != Application.ProductVersion)
             {
                 var files = VersionInfo.DocumentElement.SelectNodes("//updatedfile");
-                DialogResult result = MessageBox.Show("New Version:  " + (VersionInfo.SelectSingleNode("//latestversion").InnerText), "New Version is available!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show(rm.GetString("newVersionAvailable"), rm.GetString("newVersion"), MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     using (var client = new WebClient())
@@ -65,6 +68,7 @@ namespace QuestionannaireApp
                         }
 
                     }
+                    return true;
                 }
                 else
                 {
@@ -106,23 +110,23 @@ namespace QuestionannaireApp
                 return false;
             
         }
-        public void CheckForCorrupted()
-        {
-            //string location = AppDomain.CurrentDomain.BaseDirectory;
-            string[] files = {"questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
-            foreach (string element in files)
-            {
-                if (!File.Exists(element))
-                {
-                    using (var client = new WebClient())
-                    {
-                        client.DownloadFile(address+"update/" + element, element);
-                        System.Threading.Thread.Sleep(50);
-                    }
-                }
-            }
+        //public void CheckForCorrupted()
+        //{
+        //    //string location = AppDomain.CurrentDomain.BaseDirectory;
+        //    string[] files = {"questions1.txt", "questions2.txt", "questions3.txt", "questions4.txt" };
+        //    foreach (string element in files)
+        //    {
+        //        if (!File.Exists(element))
+        //        {
+        //            using (var client = new WebClient())
+        //            {
+        //                client.DownloadFile(address+"update/" + element, element);
+        //                System.Threading.Thread.Sleep(50);
+        //            }
+        //        }
+        //    }
 
-        }
+        //}
     }
 }
 

@@ -1,0 +1,186 @@
+1. Mis on jaama tehnokorraldusakt? 
+Dokument, mis määratleb kaubandusliku töö korraldamist
+Dokument, mis koostatakse jaamaseadmete kontrolli tulemusena
++Dokument, millega määratakse jaama tehnovahendite kasutamise kord
+Dokument, mis määratleb ehitustöid
+Dokument, mis määratleb kõrvaliste isikute viibimise jaamas
+2. Missuguse kiirusega võib mööduda ühe kollase tulega foorist? 
+15 km/h
+25 km/h
+40 km/h
+60 km/h
++Kiirusega, mis tagab vajadusel rongi peatamise
+3. Kellel on lubatud sõita veduril, kes ei kuulu vedurimeeskonna koosseisu? 
+Huvilistel
+Ajakirjanikel
+Tele- ja raadiotöötajatel
++Konduktoritel (koostebrigaad)
++Riiklikku järelevalvet teostavatel ametnikel
+4. Millised on vedurijuhi kohustused rongi juhtimisel? 
++Järgima veduri ekspluateerimisel ettenähtud tehnilisi nõudeid
++Tagama rongi ohutu liikumise vastavalt liiklusgraafikule
++Jälgima liini teeprofiili ja seal asuvate signaalide, signaalnäidikute ja – märkide paiknemist ja nende tähendust
+Osalema liinil asuvate rajatiste tulekustutamisel
+Teostama teerikkel teeremonti
+5. Missuguse kiirusega võib sõita rongi vastuvõtmisel tupikteele vastuvõtutee alguses? 
+Lubatud piirkiirusega
+5 km/h
+15 km/h
++25 km/h
+40 km/h
+6. Kui suur on Eestis raudtee sirge teeosa rööpmelaius rööpapeade sisemiste servade vahel? 
+750 mm
+1435 mm
++1520 mm
+1670 mm
+1890 mm
+7. Milleks on raudteel vajalik pidurkingade kasutamine? 
+Takistamaks reisirongi väljumist jaamast
+Ohtliku teeosa piiramiseks
+Kõrvalike isikute raudteel kõndimise takistamiseks
++Veeremi iseveeremise vältimiseks
+Veduri pidurdamiseks manöövritööl
+8. Mida on vedurijuht kohustatud jälgima oma töös ? 
++Veduri ekspluateerimisel ettenähtud tehnilisi nõudeid
++Veduri vastuvõtmisel veenduma, et see on korras
++Tagama rongi ohutu liikumise vastavalt liiklusgraafikule
++Kontrollima signaal- ja tuletõrjevahendite olemasolu
+Kontrollima vedurite rattapaaride kulumist šablooniga
+9. Kuna vedurijuht rongi peatumisel tõusul ei tohi tagurdada? 
+Poolautomaatblokeeringuga jaamavahel
++Reisirongiga
++Automaatblokeeringu või veduri automaatsignalisatsiooniga jaamavahel
++Udus, tuisus ja muudes ebasoodsates oludes, kui signaalid on raskesti eraldatavad
++Kui peatunud rong oli välja saadetud pärast kõigi signalisatsiooni- ja sidevahendite töö katkemist 
+10. Missuguste dokumentide tundmises peab sooritama raudteeliiklusega seotud töökohale asuv isik eksami? 
++Tehnokasutuseeskiri
++Signalisatsioonijuhend
++Rongiliikluse ja manöövritöö juhend
++Ametijuhendid ja muud töötajate töökohustusi sätestavad dokumendid
++Tööohutuse ja töötervishoiu eeskirjad
+11. Piirdetulp pannakse teedevahe keskele kohta kus ühinevate teede telgede vahekaugus on: 
++4100 mm
+4600 mm
+4700 mm
+4900 mm
+3900 mm
+12. Mida ei ole lubatud teha vedurijuhil teel olles? 
++Ületada raudteehoidja määratud piirkiirust või signaalide ja hoiatustega lubatud kiirust
++Lasta tähelepanu veduri juhtimiselt ning signaalide ja tee seisukorra jälgimiselt kõrvale suunata
+Remontida vedurit
+Reguleerida kiirusemõõdikut
+Päeval sõita sisselülitatud prožektoriga
+13. Mis on vastusuunaline liiklemine? 
+Liiklemine vagunitega ees
+Liiklemine veduriga rongi keskel   
++Liiklemine pärisuunalisel teel vastupidises suunas    
+Lõunasuunaline liiklemine
+Põhjasuunaline liiklemine
+14. Kontaktjuhtme rippekõrgus rööpapea pealispinnast peab olema jaamavahel ja jaamas vähemalt? 
++Vähemalt 5750 mm             5750 
+Vähemalt 5650 mm             5650 
+Vähemalt 5600 mm             5600 
+Vähemalt 5550 mm             5550 
+Vähemalt 5500 mm             5500 
+15. Millised on käikupandavad erakorralised rongid, kellel on liiklemisel eesõigus? 
+Rahvusvahelised kiirreisirongid  
++Päästerongid
++Lumesahad
++Abivedurid
++Mittemahatõstetavad dresiinid raudteeliikluse taastamiseks
+16. Juhul kui on ohus raudteeliiklus või inimeste elu, mida peab tegema raudteeliiklusega seotud töötaja? 
++Andma rongile või muule liikuvale veeremiüksusele peatussignaali      
++Võtma tarvitusele abinõud liikuva veeremiüksuse peatamiseks   
++Rakendama abinõud ohtliku koha piiramiseks  
++Rakendama abinõud rikke kõrvaldamiseks 
+Minema varjendisse
+17. Missugused turvaseadmed peavad olema veduri või mootorrongi juhiruumis? 
++Vedurifoor,
+Termomeeter
++Vedurijuhi valvsuse kontrollseade
++Liiklemisel ettenähtud parameetreid registreeriv kiirusmeerik  
+Pidurkingad
+18. Millised pealdised peavad olema veeremil ? 
+Reklaamid
+Hoiatuskirjed
++Veeremihoidja logo ja tähttähis     
++Veeremi registreerimisnumber
++Valmistajatehase silt
+19. Vagunist vagunisse laadimiseks määratud teede telgedevahe võib olla? 
+3400 mm
++3600 mm
+4100 mm
+4500 mm
+4800 mm
+20. Mis tähistab jaama piiri?
++Üherajalisel teel sissesõidufoorid
+Üherajalisel teel hoiatusfoorid
+Üherajalisel teel sissesõidu ja väljasõidu pöörangud    
++Kaherajalisel teel ühelt poolt sissesõidufoor ja teiselt poolt signaalmärk  “Jaama piir”
+Kaherajalisel teel mõlemal pool signaalmärk “Jaama piir”
+21. Millist automaatsidurite pikitelgede kõrguste vahet ei tohi ületada veduri ja kaubarongi esimese laaditud vaguni vahel ? 
+70 mm
+100 mm
++110 mm
+120 mm
+130 mm
+22. Millist automaatsidurite pikitelgede kõrguste vahet ei tohi ületada kiirusega kuni 120 km/h liikuvas reisirongis? 
++70 mm
+100 mm
+110 mm
+120 mm
+130 mm
+23. Millist automaatsidurite pikitelgede kõrguste vahet ei tohi ületada veduri ja reisirongi esimese vaguni vahel ? 
+70 mm
++100 mm
+110 mm
+120 mm
+130 mm
+24. Kellega peab rongivedurijuhtidele rongiraadioside tagama pideva ja kindla kahepoolse side ? 
+Lähedalasuvate asustatud punktidega   
++Dispetšeriga dispetšeripiirkonna ulatuses,   
++Jaamakorraldajatega naaberjaamavahede piires       
++Teiste vedurijuhtidega samal jaamavahel
+Depookorraldajaga   
+25. Missuguse dokumendiga sätestatakse pidurihoolde, rongilülitamise ja proovitegemise kord ?         
+Vabariigi Valitsuse kinnitatud pidurikasutuse juhendiga     
+Majandus- ja Kommunikatsiooni ministeeriumi kinnitatud pidurikasutuse juhendiga       
++Veeremihoidja kinnitatud raudteeveeremi pidurikasutuse juhendiga        
+Raudteeinspektsiooni kinnitatud raudteeveeremi pidurikasutuse juhendiga       
+Veduridepoo juhataja kinnitatud raudteeveeremi pidurikasutuse juhendiga
+26. Kui kaugelt peab vedurijuhiruumist olema selgesti eristatav sissesõidu- läbisõidutõkke- ja kattefoori punane, kollane ja roheline tuli sirgel teeosal nii päeval kui öösel ? 
+200 m
+400 m
+800 m
++1000 m
+1200 m
+27. Kui kaugelt peab vedurijuhiruumist olema selgesti eristatav peatee väljasõidu- ja matkafoori näit ? 
+200 m
++400 m
+600 m
+1000 m
+1200 m
+28. Kui kaugelt peab vedurijuhiruumist olema selgesti eristatav kõrvaltee väljasõidu- ja matkafoori näit (vähemalt)?
++200 m
+400 m
+600 m
+1000 m
+1200 m
+29. Kes kehtestab veeremi tehnilisi ja kasutusandmeid sisaldava passi pidamise korra ? 
+Vabariigi Valitsus 
+Majandus ja Kommunikatsiooniministeerium  
++Veeremihoidja   
+Raudteeinspektsioon 
+Tööinspektsioon 
+30. Milliste vahenditega peavad olema varustatud vedurid ja mootorrongid? 
++Tulekustutusvahendid                      
++Arstlikud esmaabivahendid             
++Ettenähtud tööriistad                      
++Signaalvahendid                            
++Neli pidurkinga                                
+31. Kelle rongiliikluse operatiivkorraldusi peavad tingimusteta täitma kõik rongiliinil rongiliiklusega seotud töötajad ? 
+Turvangutöötaja                           
+Teetöötaja                                   
+Kaubavaguni saatja                     
++Rongiliikluse dispetšeri               
+Rongikoostaja                              

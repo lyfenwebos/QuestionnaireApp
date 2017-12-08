@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.verifyButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
@@ -44,6 +45,7 @@
             this.russianTS = new System.Windows.Forms.ToolStripMenuItem();
             this.englishTS = new System.Windows.Forms.ToolStripMenuItem();
             this.fontTS = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutTS = new System.Windows.Forms.ToolStripMenuItem();
             this.moodulName = new System.Windows.Forms.Label();
             this.questionsBox = new System.Windows.Forms.CheckedListBox();
             this.questionBox = new System.Windows.Forms.TextBox();
@@ -104,7 +106,7 @@
             this.settingsTS});
             this.menuStrip1.Location = new System.Drawing.Point(9, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(123, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(215, 24);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -159,7 +161,8 @@
             // 
             this.settingsTS.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.languageTS,
-            this.fontTS});
+            this.fontTS,
+            this.aboutTS});
             this.settingsTS.Name = "settingsTS";
             this.settingsTS.Size = new System.Drawing.Size(61, 20);
             this.settingsTS.Text = "Settings";
@@ -171,7 +174,7 @@
             this.russianTS,
             this.englishTS});
             this.languageTS.Name = "languageTS";
-            this.languageTS.Size = new System.Drawing.Size(126, 22);
+            this.languageTS.Size = new System.Drawing.Size(152, 22);
             this.languageTS.Text = "Language";
             // 
             // estonianTS
@@ -198,9 +201,17 @@
             // fontTS
             // 
             this.fontTS.Name = "fontTS";
-            this.fontTS.Size = new System.Drawing.Size(126, 22);
+            this.fontTS.Size = new System.Drawing.Size(152, 22);
             this.fontTS.Text = "Font";
             this.fontTS.Click += new System.EventHandler(this.fontTS_Click);
+            // 
+            // aboutTS
+            // 
+            this.aboutTS.Enabled = false;
+            this.aboutTS.Name = "aboutTS";
+            this.aboutTS.Size = new System.Drawing.Size(152, 22);
+            this.aboutTS.Text = "About";
+            this.aboutTS.Click += new System.EventHandler(this.aboutTS_Click);
             // 
             // moodulName
             // 
@@ -410,6 +421,7 @@
             this.Controls.Add(this.answerBoxB);
             this.Controls.Add(this.questionsBox);
             this.Controls.Add(this.finishButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Questionnaire App";
@@ -454,6 +466,7 @@
         private System.Windows.Forms.ToolStripMenuItem russianTS;
         private System.Windows.Forms.ToolStripMenuItem englishTS;
         private System.Windows.Forms.ToolStripMenuItem fontTS;
+        private System.Windows.Forms.ToolStripMenuItem aboutTS;
     }
 }
 

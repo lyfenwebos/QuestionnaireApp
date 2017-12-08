@@ -15,13 +15,7 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_00295489830F40D9B3E08C268D56A578"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_2F493109F88449F4BC93C28A77334459"
+        "MsmKey" = "8:_1DB4C0B962E84C33852A0391974EB164"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -33,13 +27,37 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3F5BA8DE75FD42B59DBC5B3C2FD17A92"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_579BD62BD798A0BDDFF091DE39ADDAAF"
+        "OwnerKey" = "8:_65047A9EF4294E31B1DEA1DCC54D98CB"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_58EE7DA181D6451C8CAD22E2589B4667"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_65047A9EF4294E31B1DEA1DCC54D98CB"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6F74B257A744480EA40982CE8856E59D"
+        "MsmKey" = "8:_65D02BAC8F514CBF909502F7338CC1D7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7DC9D80B49AB496E9AB3EFAC6BB0D3C6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -51,8 +69,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EDC6F64517E94F31AF28BBF5AEE27965"
+        "MsmKey" = "8:_BE79F138429A4F46BF5EBCF0176135B0"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D14707EEFD13491DB3CA98C534907CDE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E1B50DB95E2C4C2FA7E7AB19843967BF"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_65047A9EF4294E31B1DEA1DCC54D98CB"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,7 +100,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_65047A9EF4294E31B1DEA1DCC54D98CB"
+        "OwnerKey" = "8:_579BD62BD798A0BDDFF091DE39ADDAAF"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -85,6 +121,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -101,6 +153,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -130,32 +198,12 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00295489830F40D9B3E08C268D56A578"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1DB4C0B962E84C33852A0391974EB164"
             {
-            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\questions1.txt"
-            "TargetName" = "8:questions1.txt"
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\estModul4.txt"
+            "TargetName" = "8:estModul4.txt"
             "Tag" = "8:"
-            "Folder" = "8:_05D4E33A099D48A1BC79E35EBF408C07"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2F493109F88449F4BC93C28A77334459"
-            {
-            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\questions2.txt"
-            "TargetName" = "8:questions2.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_05D4E33A099D48A1BC79E35EBF408C07"
+            "Folder" = "8:_A38861FBD1794EE3987864AF505F25E6"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -201,12 +249,103 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6F74B257A744480EA40982CE8856E59D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F5BA8DE75FD42B59DBC5B3C2FD17A92"
             {
-            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\questions4.txt"
-            "TargetName" = "8:questions4.txt"
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\rusModul4.txt"
+            "TargetName" = "8:rusModul4.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_7454CB40888A407FB201ED22969D17DB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_579BD62BD798A0BDDFF091DE39ADDAAF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_579BD62BD798A0BDDFF091DE39ADDAAF"
+                    {
+                    "Name" = "8:MySql.Data.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:MySql.Data.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_05D4E33A099D48A1BC79E35EBF408C07"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_58EE7DA181D6451C8CAD22E2589B4667"
+            {
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\rusModul1.txt"
+            "TargetName" = "8:rusModul1.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_7454CB40888A407FB201ED22969D17DB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65D02BAC8F514CBF909502F7338CC1D7"
+            {
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\estModul2.txt"
+            "TargetName" = "8:estModul2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_A38861FBD1794EE3987864AF505F25E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7DC9D80B49AB496E9AB3EFAC6BB0D3C6"
+            {
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\rusModul2.txt"
+            "TargetName" = "8:rusModul2.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_7454CB40888A407FB201ED22969D17DB"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -241,12 +380,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EDC6F64517E94F31AF28BBF5AEE27965"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BE79F138429A4F46BF5EBCF0176135B0"
             {
-            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\questions3.txt"
-            "TargetName" = "8:questions3.txt"
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\estModul3.txt"
+            "TargetName" = "8:estModul3.txt"
             "Tag" = "8:"
-            "Folder" = "8:_05D4E33A099D48A1BC79E35EBF408C07"
+            "Folder" = "8:_A38861FBD1794EE3987864AF505F25E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D14707EEFD13491DB3CA98C534907CDE"
+            {
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\estModul1.txt"
+            "TargetName" = "8:estModul1.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_A38861FBD1794EE3987864AF505F25E6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E1B50DB95E2C4C2FA7E7AB19843967BF"
+            {
+            "SourcePath" = "8:..\\QuestionnaireApp\\Questions\\rusModul3.txt"
+            "TargetName" = "8:rusModul3.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_7454CB40888A407FB201ED22969D17DB"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -277,6 +456,39 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_514EA86DDB9B4431827906DF94E685A7"
+                    {
+                    "Name" = "8:Questions"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_F165E2BDE75845AB9239C855A068B260"
+                        "Folders"
+                        {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_7454CB40888A407FB201ED22969D17DB"
+                            {
+                            "Name" = "8:RUS"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_FB479F17F8D046268761317A28DA81AA"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_A38861FBD1794EE3987864AF505F25E6"
+                            {
+                            "Name" = "8:EST"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_04ACA3C40C074D6B8429CC96AF3B1706"
+                                "Folders"
+                                {
+                                }
+                            }
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_41ED568D2A6E4E2DBF17FC02B84B9741"
@@ -317,19 +529,19 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Questionnaire App"
-        "ProductCode" = "8:{CB0EBF33-6B31-41B8-8764-06DEA665B033}"
-        "PackageCode" = "8:{664DE5F6-D5B7-4688-ACF8-9F8BE7C54391}"
+        "ProductCode" = "8:{A704255E-D6A8-45A2-91BE-DC7D06E7674E}"
+        "PackageCode" = "8:{F511590B-CF34-4E0D-8417-66B9B9B202E6}"
         "UpgradeCode" = "8:{AD54756B-7B98-407A-9169-51DAD8457160}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.4.0"
+        "ProductVersion" = "8:0.7.0"
         "Manufacturer" = "8:Exordium"
-        "ARPHELPTELEPHONE" = "8:"
+        "ARPHELPTELEPHONE" = "8:+37256490618"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Setup"
+        "Title" = "8:Questionnaire App Setup"
         "Subject" = "8:"
         "ARPCONTACT" = "8:Pavel Gontsarov"
         "Keywords" = "8:"

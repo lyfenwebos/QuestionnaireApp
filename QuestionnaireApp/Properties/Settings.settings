@@ -8,8 +8,11 @@
     <Setting Name="fontSize" Type="System.Single" Scope="User">
       <Value Profile="(Default)">11.25</Value>
     </Setting>
-    <Setting Name="language" Type="System.String" Scope="User">
+    <Setting Name="culture" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="block" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

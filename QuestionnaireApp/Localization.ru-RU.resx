@@ -117,11 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="aboutTS" xml:space="preserve">
+    <value>О Программе</value>
+  </data>
+  <data name="activation" xml:space="preserve">
+    <value>Активация</value>
+  </data>
+  <data name="activationExpired" xml:space="preserve">
+    <value>У ключа активации закончился срок действия! Свяжитесь с администратором, если Вы считаете, что это ошибка admin@exordium.cloud</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>и</value>
+  </data>
+  <data name="answerPlural" xml:space="preserve">
+    <value>ответов</value>
+  </data>
+  <data name="answerSingle" xml:space="preserve">
+    <value>ответа</value>
+  </data>
+  <data name="attention" xml:space="preserve">
+    <value>Внимание</value>
+  </data>
   <data name="backButton" xml:space="preserve">
     <value>Назад</value>
   </data>
+  <data name="cancelButton" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="cantEstablish" xml:space="preserve">
+    <value>В данный момент не удается установить связь между сервером и вашим компьютером.  Попробуйте позже</value>
+  </data>
+  <data name="contactMe" xml:space="preserve">
+    <value>Обратная  связь</value>
+  </data>
+  <data name="correctPlural" xml:space="preserve">
+    <value>правильных</value>
+  </data>
+  <data name="correctSingle" xml:space="preserve">
+    <value>правильный</value>
+  </data>
   <data name="examTS" xml:space="preserve">
     <value>Экзамен</value>
+  </data>
+  <data name="feedback" xml:space="preserve">
+    <value>text</value>
   </data>
   <data name="feedbackButton" xml:space="preserve">
     <value>Обратная связь</value>
@@ -129,11 +168,29 @@
   <data name="finishButton" xml:space="preserve">
     <value>Завершить</value>
   </data>
+  <data name="firstQuestion" xml:space="preserve">
+    <value>Это первый вопрос!</value>
+  </data>
   <data name="fontTS" xml:space="preserve">
     <value>Шрифт</value>
   </data>
+  <data name="from" xml:space="preserve">
+    <value>Из</value>
+  </data>
+  <data name="incompleteKey" xml:space="preserve">
+    <value>Вы ввели ключ не до конца</value>
+  </data>
+  <data name="incorrectPlural" xml:space="preserve">
+    <value>неправильных</value>
+  </data>
+  <data name="incorrectSingle" xml:space="preserve">
+    <value>неправильный</value>
+  </data>
   <data name="languageTS" xml:space="preserve">
     <value>Язык</value>
+  </data>
+  <data name="lastQuestion" xml:space="preserve">
+    <value>Это последний вопрос!</value>
   </data>
   <data name="modul1TS" xml:space="preserve">
     <value>Модуль 1</value>
@@ -153,17 +210,32 @@
   <data name="moodulTS" xml:space="preserve">
     <value>Модуль</value>
   </data>
+  <data name="newVersion" xml:space="preserve">
+    <value>Новая версия!</value>
+  </data>
+  <data name="newVersionAvailable" xml:space="preserve">
+    <value>Доступна новая версия. Желаете скачать?</value>
+  </data>
   <data name="nextButton" xml:space="preserve">
     <value>Следующий</value>
   </data>
   <data name="randomCheckBox" xml:space="preserve">
     <value>Случайно</value>
   </data>
+  <data name="registerButton" xml:space="preserve">
+    <value>Зарегистрировать ключ</value>
+  </data>
+  <data name="serverUnreachable" xml:space="preserve">
+    <value>Сервер в данный момент недоступен. Попробуйте позже</value>
+  </data>
   <data name="settingsTS" xml:space="preserve">
     <value>Настройки</value>
   </data>
   <data name="startup" xml:space="preserve">
     <value>Подгатавливаем приложение...</value>
+  </data>
+  <data name="testResult" xml:space="preserve">
+    <value>Результаты теста</value>
   </data>
   <data name="verifyButton" xml:space="preserve">
     <value>Проверить</value>

@@ -50,12 +50,24 @@ namespace QuestionannaireApp.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string language {
+        public string culture {
             get {
-                return ((string)(this["language"]));
+                return ((string)(this["culture"]));
             }
             set {
-                this["language"] = value;
+                this["culture"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool block {
+            get {
+                return ((bool)(this["block"]));
+            }
+            set {
+                this["block"] = value;
             }
         }
     }
