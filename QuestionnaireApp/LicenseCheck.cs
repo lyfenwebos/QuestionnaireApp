@@ -12,13 +12,8 @@ namespace QuestionannaireApp
 {
     public class LicenseCheck
     {
-        //public static string database = "Questionnaire App";
-        //public static string server = "46.101.148.248";
-        //public static uint port = 1433;
-        //public static string userID = "LicenseManager";
-        //public static string pass = "BeROIUSLwbw6S1ms";
         private static bool Activated { get; set; }
-        public static string myConnectionString = "Server=exordium.cloud;Database=Questionnaire App;Uid=;Pwd=";
+        public static string myConnectionString = String.Empty;
 
         public static bool isActivated(string key)
         {
