@@ -207,7 +207,6 @@
             // 
             // aboutTS
             // 
-            this.aboutTS.Enabled = false;
             this.aboutTS.Name = "aboutTS";
             this.aboutTS.Size = new System.Drawing.Size(152, 22);
             this.aboutTS.Text = "About";

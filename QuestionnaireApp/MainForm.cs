@@ -898,7 +898,9 @@ namespace QuestionannaireApp
         private void aboutTS_Click(object sender, EventArgs e)
         {
             About aboutForm = new About();
-            aboutForm.ShowDialog();
+                    
+                
+            
         }
     }
 }
