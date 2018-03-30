@@ -28,87 +28,86 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.sendMailBtn = new System.Windows.Forms.Button();
+            this.nameBox = new System.Windows.Forms.TextBox();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.msgBox = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.msgBoxLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // sendMailBtn
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(153, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Отправить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.sendMailBtn.Location = new System.Drawing.Point(153, 226);
+            this.sendMailBtn.Name = "sendMailBtn";
+            this.sendMailBtn.Size = new System.Drawing.Size(75, 23);
+            this.sendMailBtn.TabIndex = 0;
+            this.sendMailBtn.Text = "Отправить";
+            this.sendMailBtn.UseVisualStyleBackColor = true;
+            this.sendMailBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // nameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(163, 20);
-            this.textBox1.TabIndex = 1;
+            this.nameBox.Location = new System.Drawing.Point(83, 23);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(163, 20);
+            this.nameBox.TabIndex = 1;
             // 
-            // textBox2
+            // emailBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 20);
-            this.textBox2.TabIndex = 2;
+            this.emailBox.Location = new System.Drawing.Point(83, 67);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(163, 20);
+            this.emailBox.TabIndex = 2;
             // 
-            // textBox3
+            // msgBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(17, 126);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(356, 94);
-            this.textBox3.TabIndex = 3;
+            this.msgBox.Location = new System.Drawing.Point(17, 126);
+            this.msgBox.Multiline = true;
+            this.msgBox.Name = "msgBox";
+            this.msgBox.Size = new System.Drawing.Size(356, 94);
+            this.msgBox.TabIndex = 3;
             // 
-            // label1
+            // nameLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Имя:";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Location = new System.Drawing.Point(19, 26);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(32, 13);
+            this.nameLabel.TabIndex = 4;
+            this.nameLabel.Text = "Имя:";
             // 
-            // label2
+            // emailLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Ваш e-mail:";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Location = new System.Drawing.Point(19, 67);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(61, 13);
+            this.emailLabel.TabIndex = 5;
+            this.emailLabel.Text = "Ваш e-mail:";
             // 
-            // label3
+            // msgBoxLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(189, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Ваши вопросы, советы, пожелания:";
+            this.msgBoxLabel.AutoSize = true;
+            this.msgBoxLabel.Location = new System.Drawing.Point(19, 110);
+            this.msgBoxLabel.Name = "msgBoxLabel";
+            this.msgBoxLabel.Size = new System.Drawing.Size(189, 13);
+            this.msgBoxLabel.TabIndex = 6;
+            this.msgBoxLabel.Text = "Ваши вопросы, советы, пожелания:";
             // 
             // Feedback
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(385, 261);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.msgBoxLabel);
+            this.Controls.Add(this.emailLabel);
+            this.Controls.Add(this.nameLabel);
+            this.Controls.Add(this.msgBox);
+            this.Controls.Add(this.emailBox);
+            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.sendMailBtn);
             this.Name = "Feedback";
             this.Text = "Feedback";
             this.ResumeLayout(false);
@@ -118,12 +117,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button sendMailBtn;
+        private System.Windows.Forms.TextBox nameBox;
+        private System.Windows.Forms.TextBox emailBox;
+        private System.Windows.Forms.TextBox msgBox;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.Label msgBoxLabel;
     }
 }

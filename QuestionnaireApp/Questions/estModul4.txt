@@ -1,4 +1,4 @@
-1. Kuidas võetakse dispetšeritsentralisatsiooniga liinil rong jaama vastu, kui sissesõiduvalgusfoor ei ole avanenud? 
+﻿1. Kuidas võetakse dispetšeritsentralisatsiooniga liinil rong jaama vastu, kui sissesõiduvalgusfoor ei ole avanenud? 
 Vedurijuht kontrollib sissesõiduvalgusfoori tehnilist seisukorda
 Vedurijuht kontrollib rööpaahelate tehnilist seisukorda   
 +Rong võetakse jaama vastu rongidispetšeri käsuga, mis antakse vedurijuhile rongiraadioside kaudu
@@ -45,7 +45,7 @@ Kirjaliku teeloaga valgel blanketil vorm LA-50
 +Poolautomaatblokeeringu rikke korral
 Rongiliikluses signalisatsiooni- ja sidevahendite töö katkemisel       
 +Telefoniside kasutamisel rongiliikluse korraldamise vahendina
-+Päästerongi ja abiveduri liiklemisel
+Päästerongi ja abiveduri liiklemisel
 9.Kus kasutatakse võtisaua? 
 +Automaatblokeeringuga liinil töörongi jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
 +Poolautomaatblokeeringuga liinil töörongi jaamavahelt saatejaama tagasisõiduks antakse vedurijuhile saatejaama võtisau
@@ -227,7 +227,7 @@ Kirjaliku sõiduloaga vorm LA-54 punkti I täitmisega
 +Teatama rikkest lähima jaama korraldajale ja dispetšerile
 Teatama politseisse
 39.Kuidas saadetakse rong automaatblokeeringuga jaamavahele teelt, millel puudub väljasõidufoor? 
-Vedurijuhile raadio teel antud jaamakorraldaja käsk      
++Vedurijuhile raadio teel antud jaamakorraldaja käsk      
 +Kirjalik sõiduluba vorm LA-54 punkti I täitmisega
 Teeluba vorm LA-50
 Kirjalik sõiduluba vorm LA-52 punkti I täitmisega
