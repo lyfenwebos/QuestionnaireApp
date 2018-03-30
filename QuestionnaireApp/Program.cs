@@ -92,18 +92,20 @@ namespace QuestionannaireApp
 
                 catch
                 {
-                    if (CheckForInternetConnection() == true)
+                    if (CheckForInternetConnection() == true && !isolatedStorageFile.FileExists("license.lic"))
                     {
                         License license = new License();
                         license.ShowDialog();
                     }
+                    else if (CheckForInternetConnection() == false && !isolatedStorageFile.FileExists("license.lic"))
+                    {
+                        Properties.Settings.Default.block = true;
+                    }
                     else
                     {
-                        if (!isolatedStorageFile.FileExists("license.lic"))
-                        {
-                            Properties.Settings.Default.block = true;
-                        }
+                        Properties.Settings.Default.block = false;
                     }
+
                 }
             }
         }
