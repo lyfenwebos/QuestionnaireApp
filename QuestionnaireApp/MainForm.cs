@@ -35,7 +35,7 @@ namespace QuestionannaireApp
         public int oPosition;
         public int corrAnsIndex;
         public int wrongAnsIndex;
-
+        public int digit;
 
         public bool answerA;
         public bool answerB;
@@ -56,8 +56,11 @@ namespace QuestionannaireApp
         public string[] examCorrectQuestions = new string[20];
         public string[] examWrongQuestions = new string[20];
         public int[] corrIndexes = new int[20];
+        public int[] usedDigits = new int[5];
+        List<Int32> usedQ = new List<int>();
 
         private System.Resources.ResourceManager rm = null;
+        Random rnd = new Random();
 
         public MainForm()
         {
@@ -139,6 +142,7 @@ namespace QuestionannaireApp
             {
                 examTS.Enabled = true;
             }
+            //examTS.Enabled = true;
         }
         public void UpdateFont(string font,float size)
         {
@@ -196,48 +200,96 @@ namespace QuestionannaireApp
             if (!exam)
             {
                 index = Array.IndexOf(logfile, questionBox.Text);
-
-
-
                 indexChecked = questionsBox.SelectedIndex;
-
-
-
-                for (int y = index; y <= index + 5; y++)
+                for (int y = index+1; y < index + 6; y++)
                 {
+                    digit = rnd.Next(0, textBoxes.Length);
+                    while (textBoxes[digit].Text != "")
+                    {
+                        digit = rnd.Next(0, textBoxes.Length);
+                    }
+
                     if (logfile[y].Contains('+'))
                     {
+
                         correctAnswers++;
                         var aStringBuilder = new StringBuilder(logfile[y]);
                         aStringBuilder.Remove(0, 1);
                         //logfile[y] = aStringBuilder.ToString();
 
-                        position = y;
-                        for (int i = 0; i < textBoxes.Length; i++)
-                        {
-                            if (position == index + (i + 1))
-                            {
-                                textBoxes[i].Text = aStringBuilder.ToString();
-                                answerArray[i] = true;
-                            }
+                        //position = y;
+                        //for (int i = 0; i < textBoxes.Length; i++)
+                        //{
+                        //    if (position == index + (i + 1))
+                        //    {
+                        //        textBoxes[i].Text = aStringBuilder.ToString();
+                        //        answerArray[i] = true;
+                        //    }
 
-                        }
+                        //}
+
+                        textBoxes[digit].Text = aStringBuilder.ToString();
+                        answerArray[digit] = true;
+                        
                     }
-                }
-                for (int i = 0; i < textBoxes.Length; i++)
-                {
-                    if (textBoxes[i].Text == "")
+                    else
                     {
-    
-                        textBoxes[i].Text = logfile[index + (i + 1)];
-                        if (textBoxes[i].Text == "-")
-                        {
-                            textBoxes[i].Enabled = false;
-                            checkBoxes[i].Enabled = false;
-                        }
+                        textBoxes[digit].Text = logfile[y];
+
                     }
                 }
+                //int empty = 0;
+                //foreach (TextBox element in textBoxes)
+                //{
+                    
+                //    if (element.Text == "")
+                //    {
+                //        empty++;
+                //    }
+                //}
+
+                //for (int i = 0; i <= empty; i++)
+                //{
+                //    int indexQ = (index + (i + 1));
+                //    if (!logfile[indexQ].Contains('+'))
+                //    {
+                //        digit = rnd.Next(0, textBoxes.Length);
+                //        while (textBoxes[digit].Text != "")
+                //        {
+                //            digit = rnd.Next(0, textBoxes.Length);
+                //        }
+                //            textBoxes[digit].Text = logfile[indexQ];
+
+                //        if (textBoxes[digit].Text == "-")
+                //        {
+                //            textBoxes[digit].Enabled = false;
+                //            checkBoxes[digit].Enabled = false;
+                //        }
+                //    }
+                //    else
+                //    {
+                //        while (logfile[indexQ].Contains('+'))
+                //        {
+                //            indexQ++;
+                //            i++;
+                //        }
+
+                //        digit = rnd.Next(0, textBoxes.Length);
+                //        while (textBoxes[digit].Text != "")
+                //        {
+                //            digit = rnd.Next(0, textBoxes.Length);
+                //        }
+                //            textBoxes[digit].Text = logfile[indexQ];
+                //        if (textBoxes[digit].Text == "-")
+                //        {
+                //            textBoxes[digit].Enabled = false;
+                //            checkBoxes[digit].Enabled = false;
+                //        }
+                //    }
+                //}
             }
+
+
             else if (exam)
             {
                 int switchCount = 1;
@@ -484,7 +536,7 @@ namespace QuestionannaireApp
             {
                 if (randomCheckBox.Checked == true)
                 {
-                    Random rnd = new Random();
+                    
                     int randomIndex = rnd.Next(0, questionsBox.Items.Count);
                     //while (randomIndex == indexChecked && questionsBox.GetSelected(randomIndex) == true)
                     //{
@@ -496,17 +548,30 @@ namespace QuestionannaireApp
                     //    randomIndex = rnd.Next(0, questionsBox.Items.Count);
                     //}
 
-                    check:
-
-                    if (!questionsBox.GetItemChecked(randomIndex))
-                    {
-                        questionsBox.SetSelected(randomIndex, true);
-                    }
-                    else if (questionsBox.GetItemChecked(randomIndex))
+                    //while (true)
+                    //    {
+                    //    if (!questionsBox.GetItemChecked(randomIndex))
+                    //    {
+                    //        questionsBox.SetSelected(randomIndex, true);
+                    //        break;
+                    //    }
+                    //    else if (questionsBox.GetItemChecked(randomIndex))
+                    //    {
+                    //        randomIndex = rnd.Next(0, questionsBox.Items.Count);
+                    //    }
+                    //}
+                    int count = 0;
+                    while (questionsBox.GetItemChecked(randomIndex))
                     {
                         randomIndex = rnd.Next(0, questionsBox.Items.Count);
-                        goto check;
+                        count++;
+                        if (count == questionsBox.Items.Count)
+                        {
+                            MessageBox.Show(rm.GetString("lastQuestion"), rm.GetString("attention"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            break;
+                        }
                     }
+                    questionsBox.SetSelected(randomIndex, true);
                 }
                 else
                 {
@@ -515,8 +580,6 @@ namespace QuestionannaireApp
                         questionsBox.SetSelected(indexChecked + 1, true);
                     }
                 }
-
-
             }
             catch (ArgumentOutOfRangeException)
             {
@@ -593,6 +656,8 @@ namespace QuestionannaireApp
                 Array.Clear(examCorrectQuestions, 0, examCorrectQuestions.Length);
                 Array.Clear(examWrongQuestions, 0, examWrongQuestions.Length);
                 Array.Clear(corrIndexes, 0, corrIndexes.Length);
+
+            questionsBox.Enabled = true;
             }
         
 
@@ -732,89 +797,43 @@ namespace QuestionannaireApp
                 element.BackColor = Color.WhiteSmoke;
             }
 
-            for (int k = 1; k <= 4; k++)
+            for (int k = 0; k < 4; k++)
             {
-                switch (k)
+                if (Properties.Settings.Default.culture == "et-EE")
                 {
-                    case 1:
-                        if (Properties.Settings.Default.culture == "et-EE")
-                        {
-                            filename = questionsEst[0];
-                        }
-                        else
-                        {
-                            filename = questionsRus[0];
-                        }
-                        logfile = File.ReadAllLines(filename);
-                        qAmount = logfile.Length / 6;
-                        break;
-                    case 2:
-                        if (Properties.Settings.Default.culture == "et-EE")
-                        {
-                            filename = questionsEst[1];
-                        }
-                        else
-                        {
-                            filename = questionsRus[1];
-                        }
-                        logfile = File.ReadAllLines(filename);
-                        qAmount = logfile.Length / 6;
-                        break;
-                    case 3:
-                        if (Properties.Settings.Default.culture == "et-EE")
-                        {
-                            filename = questionsEst[2];
-                        }
-                        else
-                        {
-                            filename = questionsRus[2];
-                        }
-                        logfile = File.ReadAllLines(filename);
-                        qAmount = logfile.Length / 6;
-                        break;
-                    case 4:
-                        if (Properties.Settings.Default.culture == "et-EE")
-                        {
-                            filename = questionsEst[3];
-                        }
-                        else
-                        {
-                            filename = questionsRus[3];
-                        }
-                        logfile = File.ReadAllLines(filename);
-                        qAmount = logfile.Length / 6;
-                        break;
+                    filename = questionsEst[k];
                 }
+                else
+                {
+                    filename = questionsRus[k];
+                } 
+                logfile = File.ReadAllLines(filename);
+                qAmount = logfile.Length / 6;
+                usedQ.Clear();
+
 
                 for (int y = 1; y <= 5; y++)
                 {
                     int x = 0;
-                    Random rnd = new Random();
-                    switch (k)
+                    x = rnd.Next(0, qAmount);
+                    foreach (int element in usedQ)
                     {
-                        case 1:
+                        while (element == x)
+                        {
                             x = rnd.Next(0, qAmount);
-                            x *= 6;
-                            break;
-                        case 2:
-                            x = rnd.Next(0, qAmount);
-                            x *= 6;
-                            break;
-                        case 3:
-                            x = rnd.Next(0, qAmount);
-                            x *= 6;
-                            break;
-                        case 4:
-                            x = rnd.Next(0, qAmount);
-                            x *= 6;
-                            break;
+                        }
                     }
+                    usedQ.Add(x);
+                    x *= 6;
+
                     var aStringBuilder = new StringBuilder(logfile[x]);
                     aStringBuilder.Remove(0, 3);
-                    aStringBuilder.Insert(0,qPosition + ".");
+                    aStringBuilder.Insert(0, qPosition + ".");
                     qPosition++;
                     questionsBox.Items.Add(aStringBuilder);
-                    System.Threading.Thread.Sleep(50);
+                    System.Threading.Thread.Sleep(100);
+                    this.Refresh();
+                    Application.DoEvents();
 
 
                 }

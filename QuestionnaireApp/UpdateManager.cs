@@ -16,6 +16,7 @@ namespace QuestionannaireApp
     {
         System.Resources.ResourceManager rm = null;
         public string address = "http://46.101.148.248/";
+        string setupPath = Path.GetTempPath()+"questionnaireAppSetup.msi";
         public static string GetWebPage(string URL)
         {
             HttpWebRequest Request = (HttpWebRequest)(WebRequest.Create(new Uri(URL)));
@@ -62,7 +63,7 @@ namespace QuestionannaireApp
                     {
                         foreach (XmlNode element in files)
                         {
-                            client.DownloadFile(address+"update/" + element.InnerText, element.InnerText);
+                            client.DownloadFile(address+"update/" + element.InnerText, setupPath);
                             System.Threading.Thread.Sleep(50);
 
                         }

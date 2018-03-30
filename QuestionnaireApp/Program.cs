@@ -33,17 +33,18 @@ namespace QuestionannaireApp
             License license = new License();
             progressBox.Show();
             checkLicenseFile();
+            string setupPath = Path.GetTempPath() + "questionnaireAppSetup.msi";
 
-            if (File.Exists("Setup.msi"))
+            if (File.Exists(setupPath))
             {
-                File.Delete("Setup.msi");
+                File.Delete(setupPath);
             }
             UpdateManager updateManager = new UpdateManager();
             if (updateManager.CheckConnection() == true)
             {
                 if (updateManager.CheckUpdate() == true)
                 {
-                    Process.Start("Setup.msi");
+                    Process.Start(setupPath);
                     Environment.Exit(0);
                 }
                 else
